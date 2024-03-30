@@ -3,28 +3,34 @@
     width: 100%;
     gap: 3rem;
     padding: 2rem;
+    justify-content: flex-start !important;
 }
-
+.HandCards .owl-stage-outer{
+    padding-left: 2rem;
+}
 .HandCards .card {
     position: relative;
     height: 400px;
-    min-width: 200px;
-    padding: 2rem;
+    max-width: 300px;
+    padding: 1rem;
     background: transparent;
-    border: none;
 }
 
-.HandCards .card h2 {
+.HandCards .card h1 {
     font-size: 17rem;
-    height: 100%;
     text-transform: capitalize;
     background: linear-gradient(to top, #C2C1C194, #FFFFFF);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    margin-right: 0rem;
-    letter-spacing: -2.5rem;
+    color: transparent !important;
     font-family: sfbold;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 0%;
+    transform: translate(-70%, -50%);
+    margin-bottom: 0 !important;
 }
 
 .HandCards .card img {
@@ -32,23 +38,68 @@
     width: 100%;
     border-radius: 25px !important;
     object-fit: cover;
+    z-index: 2;
 }
+
+.owl-prev {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    position: absolute;
+    left: -5%;
+    top: 40%;
+    font-weight: 100 !important;
+    transform: translate(0%, -30%);
+    z-index: 10;
+  }
+  
+  .owl-prev span {
+    font-size: 10rem;
+    font-weight: 100 !important;
+    font-family: "system-ui";
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.575) !important;
+    content: "heiil" !important;
+  }
+  
+  .owl-next span {
+    font-size: 10rem;
+    font-weight: 100 !important;
+    font-family: "system-ui";
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.575) !important;
+    content: "heiil" !important;
+  }
+  
+  .owl-next {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    position: absolute;
+    right:-5%;
+    top: 40%;
+    font-weight: 100 !important;
+    transform: translate(0%, -30%);
+    z-index: 10;
+  }
+  
 
 @media screen and (max-width: 1280px) {
     .HandCards {
         padding: 1rem;
     }
-
     .HandCards .card h2 {
         font-size: 10rem;
         margin-right: -1rem;
     }
 }
-
 @media screen and (max-width: 428px) {
     .HandCards {
         padding: 1rem;
     }
+
 
     .HandCards .card h2 {
         font-size: 10rem;
