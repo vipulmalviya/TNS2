@@ -1,16 +1,19 @@
 @font-face {
-  font-family: sfregular;
-  src: url("client/src/assets/fonts/SFPRODISPLAYREGULAR.woff");
+  font-family: 'sfregular';
+  src: url("client/src/assets/fonts/SFPRODISPLAYREGULAR.woff") format('woff'),
+       url("client/src/assets/fonts/HelveticaNeueLight.woff") format('woff');
 }
 
 @font-face {
-  font-family: sfmedium;
-  src: url("client/src/assets/fonts/SFPRODISPLAYMEDIUM.woff");
+  font-family: 'sfmedium';
+  src: url("client/src/assets/fonts/SFPRODISPLAYMEDIUM.woff") format('woff'),
+       url("client/src/assets/fonts/HelveticaNeueMedium.woff") format('woff');
 }
 
 @font-face {
-  font-family: sfbold;
-  src: url("client/src/assets/fonts/SFPRODISPLAYBOLD.woff");
+  font-family: 'sfbold';
+  src: url("client/src/assets/fonts/SFPRODISPLAYBOLD.woff") format('woff'),
+       url("client/src/assets/fonts/HelveticaNeueBold.woff") format('woff');
 }
 
 * {
