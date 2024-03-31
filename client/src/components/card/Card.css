@@ -1,8 +1,7 @@
-
 .MovieCards .card {
     min-height: 600px;
-    min-width: 350px;
-    padding: 2rem;
+    max-width: 400px;
+    padding: 1rem;
     background: transparent;
     color: var(--text-color);
     border: none;
@@ -22,9 +21,9 @@
 }
 
 .movieDetails h4 {
-    width:50%;
+    width: 50%;
     line-height: 2rem;
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis !important;
     padding-right: 1rem;
@@ -46,7 +45,8 @@
 .movieDetails span img {
     width: fit-content !important;
 }
-.movieDetails .number{
+
+.movieDetails .number {
     color: var(--light-gray-color);
     font-size: var(--p2-Paragraph);
     font-weight: 500;
@@ -54,12 +54,24 @@
 }
 
 
-.movieDetails  .mainbtn {
+.movieDetails .mainbtn {
     width: 100%;
 }
 
+@media screen and (max-width: 900px) {
+    .MovieCards .card {
+        max-width: 100%;
+    }
+
+}
 @media screen and (max-width: 428px) {
     .MovieCards {
         padding: 1rem;
     }
+
+    .MovieCards .card {
+        padding: 0rem !important;
+        max-width:300px !important;
+    }
+
 }

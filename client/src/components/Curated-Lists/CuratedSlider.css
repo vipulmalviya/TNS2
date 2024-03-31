@@ -65,10 +65,8 @@
     transform: translateY(0rem);
 }
 
-@media screen and (max-width: 428px) {
-    .CuratedCards {
-        padding: 1rem;
-    }
+@media screen and (max-width: 768px) {
+
 
     .CuratedCards .card h3 {
         line-height: 1.8rem !important;
@@ -76,7 +74,29 @@
     }
 
     .CuratedCards .card p {
-
         line-height: 1.2rem !important;
+    }
+
+}
+@media screen and (max-width: 428px) {
+    .CuratedCards {
+        padding: 1rem !important;
+    }
+
+    .CuratedCards .card {
+      padding: .5rem;
+      height: 500px;
+    }
+    .CuratedCards .card h3 {
+        line-height: 1.8rem !important;
+        margin-bottom: 1rem;
+    }
+
+    .CuratedCards .card p {
+        line-height: 1.2rem !important;
+    }
+    .SectionLablediv{
+        flex-direction: column;
+        align-items: flex-start !important;
     }
 }

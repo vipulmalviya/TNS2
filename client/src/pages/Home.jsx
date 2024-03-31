@@ -6,7 +6,7 @@ import Button from "./../components/buttons/Button.jsx"
 import ButtonSec from "./../components/buttons/ButtonSec.jsx"
 import HandSlider from '../components/top-hand-pick-slider/HandSlider.jsx';
 import MovieSlider from '../components/Top-Movies-Suggestions/MovieSlider.jsx';
-import CuratedSlider from '../components/Curated-Lists/Top-Movies-Suggestions/CuratedSlider.jsx';
+import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
 
 const Home = () => {
   return (

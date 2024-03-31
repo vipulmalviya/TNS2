@@ -90,12 +90,12 @@ const HandSlider = ({ title, type }) => {
                     responsive={{
                         0: {
                             items: 1,
-                            nav: false,
-
+                            // margin:250,
+                            nav:false,
                         },
                         800: {
                             items: 2,
-                            margin: 100,
+                            // margin: 100,
                         },
                         1000: {
                             items: 3,
@@ -103,7 +103,7 @@ const HandSlider = ({ title, type }) => {
                     }}>
                     {Lcard.map((elem, index) => <div className="card d-flex align-align-items-center justify-content-center" key={index}>
                         <h1 className='d-flex align-align-items-center justify-content-center'>{index + 1}</h1>
-                        <img src={elem.poster_path} alt="" />
+                        <img height={"100%"} width={"100%"} src={elem.poster_path} alt="" />
                     </div>)}
                 </OwlCarousel> 
             </div>

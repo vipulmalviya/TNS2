@@ -26,7 +26,7 @@ nav .left {
 
 .navM {
     width: 100%;
-    justify-content: flex-end !important;
+    display: flex;
 }
 
 .navM form {
@@ -88,7 +88,7 @@ nav .right {
 }
 
 @media screen and (max-width: 428px) {
-    .navM form {
+    .navM{
         display: none;
     }
 
@@ -121,5 +121,8 @@ nav .right {
     }
     .Watchlist:hover::before {
         opacity: 1;
+    }
+    nav {
+        padding: 0rem 0rem;
     }
 }

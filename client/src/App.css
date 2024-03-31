@@ -58,30 +58,36 @@ body {
 
 
 /* For desktops */
-@media only screen and (min-width: 1025px) {}
+@media only screen and (max-width: 1025px) {}
 
 /* For tablets */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+@media only screen and (max-width: 1024px) {}
 
 /* For mobile devices */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   :root {
-    --h1-Heading: 2rem,
-      --h2-Heading:1.875rem,
-      --h3-Heading:1.5rem,
-      --h4-Heading:1.25rem,
-      --h5-Heading:1rem,
-      --h6-Heading:0.875rem,
+    --h1-Heading: 2rem;
+      --h2-Heading:1.875rem;
+      --h3-Heading:1.5rem;
+      --h4-Heading:1.25rem;
+      --h5-Heading:1rem;
+      --h6-Heading:0.875rem;
 
 
       /* Text Sizes */
-      --p1-Paragraph:1rem,
-      --p2-Paragraph:0.875rem,
-      --p3-Paragraph:0.75rem,
+      --p1-Paragraph:1rem;
+      --p2-Paragraph:0.875rem;
+      --p3-Paragraph:0.75rem;
 
-      --s-tb:4.375rem,
-      /* spacing Between sections and hading*/
-      --h-tb:1.875rem,
+      --s-tb:4.375rem;
+      --h-tb:1.875rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  :root {
+    --s-tb: 4.375rem;
+     --h-tb:1.875rem;
   }
 }
 
@@ -90,33 +96,38 @@ h1 {
   font-size: var(--h1-Heading);
   margin-bottom: var(--h-tb);
 }
+
 h2 {
   font-size: var(--h2-Heading);
 }
+
 h3 {
   font-size: var(--h3-Heading);
 }
+
 h4 {
   font-size: var(--h4-Heading);
 }
+
 h5 {
   font-size: var(--h5-Heading);
 }
+
 h6 {
   font-size: var(--h6-Heading);
 }
 
-p{
-  font-size: var( --p3-Paragraph);
+p {
+  font-size: var(--p3-Paragraph);
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--dark-background-color);
 }
 
-section{
-margin: 0  0 var(--s-tb) 0 ;
+section {
+  margin-bottom: var(--s-tb);
 }
 
 
@@ -125,11 +136,12 @@ margin: 0  0 var(--s-tb) 0 ;
 .homeCarousel {
   margin-bottom: var(--s-tb);
 }
+
 .homeCarousel .Caption {
   position: absolute;
   bottom: 5vh;
   left: 5vw;
-  width: 500px;
+  max-width: 500px;
   height: fit-content;
   padding: 1rem;
   overflow: hidden;
@@ -144,10 +156,11 @@ margin: 0  0 var(--s-tb) 0 ;
   white-space: nowrap;
   text-transform: capitalize;
 }
+
 .movieDescription {
   /* font-weight: 500 !important; */
   overflow: hidden;
-  font-family: sfregular ;
+  font-family: sfregular;
   font-weight: 300;
   width: 100%;
   /* text-overflow: ellipsis;
@@ -156,6 +169,7 @@ margin: 0  0 var(--s-tb) 0 ;
   text-align: start;
   font-size: var(--h6-Heading);
 }
+
 
 .movieDescription:hover {
   transition: .3s;
@@ -169,18 +183,22 @@ margin: 0  0 var(--s-tb) 0 ;
   margin-left: .5rem;
 }
 
-.homeCarousel .mainbtn a{
+.homeCarousel .mainbtn a {
   color: var(--dark-background-color);
-  margin:.5rem;
+  margin: .5rem;
 }
+
 .homeCarousel .mainbtnSec {
-border-color: var(--decorate-color);
+  border-color: var(--decorate-color);
 }
-.homeCarousel .mainbtnSec a{
+
+.homeCarousel .mainbtnSec a {
   color: var(--decorate-color);
-  margin:.5rem;
+  margin: .5rem;
 }
-.carousel-control-next-icon, .carousel-control-prev-icon {
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   width: 5rem;
   height: 5rem;
 }
@@ -189,13 +207,15 @@ border-color: var(--decorate-color);
   padding: .3rem !important;
   background: var(--decorate-color) !important;
 }
+
 .carousel-indicators [data-bs-target] {
   box-sizing: content-box;
   border-radius: 50%;
   width: 10px !important;
-  height:10px !important;
+  height: 10px !important;
   border: 0 !important;
 }
+
 .carousel-indicators {
   align-items: center !important;
   gap: 1rem;
@@ -203,7 +223,7 @@ border-color: var(--decorate-color);
 
 /* Craft Your Watchlist */
 
-.pcontainer{
+.pcontainer {
   min-height: 150px;
   width: 100%;
   background-color: var(--decorate-color);
@@ -211,22 +231,46 @@ border-color: var(--decorate-color);
   justify-content: space-between !important;
   border-radius: 25px;
 }
-.pcontainer h2{
+
+.pcontainer h2 {
   font-size: var(--h3-Heading);
   font-family: sfbold;
-  line-height:2rem;
+  line-height: 2rem;
   color: var(--black-color);
 }
-.pcontainer h2{
+
+.pcontainer h2 {
   font-size: var(--h3-Heading);
 }
-.pcontainer > .mainbtnSec{
+
+.pcontainer>.mainbtnSec {
   width: fit-content;
   margin: 0;
   border: none;
   background: var(--dark-background-color);
 }
-.SectionLable{
+
+.SectionLable {
   color: var(--text-color);
   font-size: var(--h4-Heading);
+}
+
+
+@media screen and (max-width: 428px) {
+  .pcontainer {
+    flex-direction: column;
+  }
+  .movieBtns{
+    flex-direction: column;
+  }
+  .homeCarousel .Caption{
+    width: 100%;
+    bottom: 10%;
+    left: 0%;
+    /* transform: translate(0% , -10%); */
+  }
+  .carousel-control-next, .carousel-control-prev {
+    display: none;
+  }
+
 }

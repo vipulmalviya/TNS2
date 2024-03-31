@@ -3,7 +3,7 @@ import "./CuratedSlider.css"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import Button from '../../buttons/Button';
+import Button from '../buttons/Button';
 
 
 
@@ -34,7 +34,7 @@ const CuratedSlider = ({ title }) => {
     return (
         <section>
             <div className="container">
-                <div className='d-flex justify-content-between align-items-center'>
+                <div className='SectionLablediv d-flex justify-content-between align-items-center'>
                 <h3 className='SectionLable'>{title}{">"}</h3>
                 <span style={{color:"white",cursor:'pointer',}} className='d-flex align-items-center justify-content-center gap-2'>See All <span><img height={"100%"} width={"100%"} src="client/src/assets/images/tir.svg" alt="" /></span></span>
                 </div>
