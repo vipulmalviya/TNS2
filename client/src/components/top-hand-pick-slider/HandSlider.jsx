@@ -7,6 +7,9 @@ import useFetch from '../../components/fetch/useFetch.jsx';
 
 const HandSlider = ({ title, type }) => {
 
+    // document.querySelector(".owl-prev span").innerHTML = ">";
+
+
     // const [movies, setMovies] = useState([]);
     // const apiKey = '07d7941833065b1ddd54a729aaa554e5';
     // const fetchMovieData = async () => {
@@ -100,6 +103,7 @@ const HandSlider = ({ title, type }) => {
                         1000: {
                             items: 3,
                         }
+                       
                     }}>
                     {Lcard.map((elem, index) => <div className="card d-flex align-align-items-center justify-content-center" key={index}>
                         <h1 className='d-flex align-align-items-center justify-content-center'>{index + 1}</h1>

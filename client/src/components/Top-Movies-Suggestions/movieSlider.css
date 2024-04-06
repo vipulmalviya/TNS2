@@ -5,6 +5,12 @@
     gap: 3rem;
     padding: 2rem;
 }
+.movieDetails .mainbtn {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color) !important;
+}
 
 /* skeleton animation */
 
@@ -31,7 +37,7 @@
     );
     animation: shimmer 2s infinite;
     content: "";
-  }
+  
   
   @keyframes shimmer {
     100% {

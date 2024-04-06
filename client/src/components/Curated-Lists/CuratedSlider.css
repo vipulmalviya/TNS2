@@ -40,7 +40,7 @@
 .CuratedCards .card p {
     color: var(--light-gray-color);
     line-height: 2.5rem;
-    font-size: var(--normal-font-size);
+    font-size: var(--p1-Paragraph);
 }
 
 .CardContainer {

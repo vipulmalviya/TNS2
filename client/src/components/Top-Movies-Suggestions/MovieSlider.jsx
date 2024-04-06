@@ -112,7 +112,7 @@ const MovieSlider = ({ title, type }) => {
                             items: 2,
                         },
                         1000: {
-                            items: 4,
+                            items: 4.5,
                         }
                     }}>
                     {Lcard.map((elem) =>

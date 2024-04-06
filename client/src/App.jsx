@@ -3,6 +3,9 @@ import "./App.css"
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
 import Nav from './components/Nav/Nav.jsx';
+import Login from './pages/Login.jsx';
+import Register from './pages/Register.jsx';
+import WatchlistPage from './pages/WatchlistPage.jsx';
 
 
 function App() {
@@ -10,7 +13,10 @@ function App() {
     <Router>
       <Nav />
       <Routes>
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/WatchlistPage" element={<WatchlistPage />} />
       </Routes>
       <Footer />
     </Router>

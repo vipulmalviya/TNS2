@@ -63,7 +63,7 @@
     font-family: "system-ui";
     font-style: normal;
     color: rgba(255, 255, 255, 0.575) !important;
-    content: "heiil" !important;
+    content: url("client/src/assets/images/leftarrow.svg") !important;
 }
 
 .owl-next span {
@@ -72,8 +72,9 @@
     font-family: "system-ui";
     font-style: normal;
     color: rgba(255, 255, 255, 0.575) !important;
-    content: "heiil" !important;
+    content: url("client/src/assets/images/rightarrow 15.svg") !important;
 }
+
 
 .owl-next {
     background-color: transparent;
@@ -126,7 +127,8 @@
         /* transform: translate(0%, 0%); */
         transition: all ease-in .3s;
     }
-    .HandCards .card:hover h1{
+
+    .HandCards .card:hover h1 {
         top: 75% !important;
     }
 
