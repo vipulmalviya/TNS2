@@ -7,6 +7,7 @@ import ButtonSec from "./../components/buttons/ButtonSec.jsx"
 import HandSlider from '../components/top-hand-pick-slider/HandSlider.jsx';
 import MovieSlider from '../components/Top-Movies-Suggestions/MovieSlider.jsx';
 import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
+import { IoIosArrowForward } from 'react-icons/io';
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
                 </Button>
                 <ButtonSec>
                   <img height={"17px"} width={"17px"} src="client/src/assets/images/plus-large.svg" alt="" />
-                  <Link to="/curatedPage">add to watchlist</Link>
+                  <Link to="/WatchlistPage">add to watchlist</Link>
                 </ButtonSec>
               </div>
             </Carousel.Caption>
@@ -54,11 +55,11 @@ const Home = () => {
               <div className='movieBtns w-100 gap-3 d-flex'>
                 <Button>
                   <img height={"17px"} width={"17px"} src="client/src/assets/images/play.svg" alt="" />
-                  <Link to="/SingleMoviePage">stream now</Link>
+                  <Link to="/WatchlistPage">stream now</Link>
                 </Button>
                 <ButtonSec>
                   <img height={"17px"} width={"17px"} src="client/src/assets/images/plus-large.svg" alt="" />
-                  <Link to="/curatedPage">add to watchlist</Link>
+                  <Link to="/WatchlistPage">add to watchlist</Link>
                 </ButtonSec>
               </div>
             </Carousel.Caption>
@@ -79,11 +80,12 @@ const Home = () => {
               <div className='movieBtns w-100 gap-3 d-flex'>
                 <Button>
                   <img height={"17px"} width={"17px"} src="client/src/assets/images/play.svg" alt="" />
-                  <Link to="/SingleMoviePage">stream now</Link>
+                  <Link to="/WatchlistPage">stream now</Link>
                 </Button>
                 <ButtonSec>
                   <img height={"17px"} width={"17px"} src="client/src/assets/images/plus-large.svg" alt="" />
-                  <Link to="/curatedPage">add to watchlist</Link>
+                  <Link to="/WatchlistPage">add to watchlist</Link>
+
                 </ButtonSec>
               </div>
             </Carousel.Caption>
@@ -92,11 +94,12 @@ const Home = () => {
       </section>
       <section className='carftSection'>
         <div className="container">
-          <h4 className='SectionLable mb-4'>
-            Craft Your Watchlist {">"}
+          <h4 className='SectionLable mb-4 align-align-items-center justify-content-center'>
+            Craft Your Watchlist
+            <IoIosArrowForward />
           </h4>
           <div className='pcontainer d-flex align-items-center'>
-            <h2>Create a Watchlist that value your taste and time.!</h2>
+            <h2>Create a Watchlist that value your <br /> taste and time.!</h2>
             <ButtonSec>Let’s see what you’ve got</ButtonSec>
           </div>
         </div>
@@ -104,7 +107,7 @@ const Home = () => {
       <HandSlider />
       <MovieSlider type={"movie"} title={"Top Movies Suggestions "} />
       <MovieSlider type={"tv"} title={"Top Tv Series Suggestions"} />
-      <CuratedSlider title={"Curated Lists Just For You "}/>
+      <CuratedSlider title={"Curated Lists Just For You "} />
     </Fragment >
   )
 }

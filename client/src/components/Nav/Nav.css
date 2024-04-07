@@ -1,5 +1,5 @@
 header {
-    position: relative;
+    position: sticky !important;
     top: 0;
     left: 0;
     width: 100vw;
@@ -70,8 +70,9 @@ nav .right {
     color: var(--text-color);
     font-family: "sfregular" !important;
 }
+
 .Watchlist p {
- margin: 0;
+    margin: 0;
 }
 
 .hamburgur {
@@ -82,14 +83,113 @@ nav .right {
     margin: 1rem;
 }
 
+
+
+/* side menu css */
+
+.side-menu {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 35vw;
+    background: #282829 !important;
+    transition: all ease-in-out .3s;
+}
+
+.open {
+    position: absolute;
+    right: 0 !important;
+}
+
+
+.dropdown-menu {
+    position: relative !important;
+    background-color: transparent !important;
+    inset: 0px auto auto 0px !important;
+    margin: 0px !important;
+    border: none !important;
+    transform: translate(0px, 0px) !important;
+}
+
+.dropdown-item svg {
+    color: var(--decorate-color);
+}
+
+.dropdown-item {
+    font-family: sfregular;
+    font-size: var(--p1-Paragraph);
+    /* color: var(--decorate-color); */
+    color: var(--text-color);
+    background-color: none;
+}
+
+.dropdown>.dropdown-toggle {
+    color: var(--decorate-color);
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-nav .dropdown-item {
+    color: var(--decorate-color);
+    background-color: transparent;
+    font-family: sfbold;
+    border: none;
+    font-size: var(--h4-Heading);
+}
+
+.dropdown>.dropdown-toggle>h2 {
+    color: var(--decorate-color);
+    font-family: sfbold;
+    font-size: var(--h4-Heading);
+}
+
+.closebtn {
+    background: rgba(255, 255, 255, 0.179);
+    color: var(--decorate-color);
+    border-radius: 50%;
+    padding: .5rem;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 50px !important;
+    width: 50px !important;
+    cursor: pointer;
+}
+
+/* .dropdown-item:focus, .dropdown-item:hover {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: var();
+} */
+
+.logoutdiv svg {
+    font-size: 20px;
+    color: var(--decorate-color);
+}
+
+.logoutdiv h6 {
+    color: var(--text-color);
+    font-family: sfregular;
+    font-size: var(--h6-Heading);
+}
+
+
+
 @media screen and (max-width: 800px) {
     nav {
         padding: 0rem 1rem;
     }
+
+    .side-menu {
+        width: 100%;
+    }
+    .right .Watchlist{
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 428px) {
-    .navM{
+    .navM {
         display: none;
     }
 
@@ -120,9 +220,11 @@ nav .right {
         opacity: 0;
         transition: all ease-in .3s;
     }
+
     .Watchlist:hover::before {
         opacity: 1;
     }
+
     nav {
         padding: 0rem 0rem;
     }

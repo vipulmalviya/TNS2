@@ -1,14 +1,17 @@
 .mainbtn {
-    background-color:#BACC4A ;
+    background-color: #BACC4A;
     color: var(--black-color);
     /* width: 100%; */
-    padding: 10px 28px;
+    /* padding: 10px 28px; */
+    padding: 0.5rem 2rem;
     border-radius: 10px;
     cursor: pointer;
     border: none;
-    font-size: var(--normal-font-size);
+    font-size: var(--p2-Paragraph);
     display: inline-block;
+    text-transform: capitalize;
 }
+
 /* 
 .mainbtn:hover {
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -16,17 +19,24 @@
 
 .mainbtnSec {
     display: inline-block;
-    background-color:transparent ;
+    background-color: transparent;
     color: white !important;
     /* width: 100%; */
-    padding: 10px 28px;
+    padding: 0.5rem 2rem;
     border-radius: 10px;
     cursor: pointer;
     border: 1px solid white;
     align-items: center !important;
     justify-content: center !important;
-    gap:0.5rem;
-    font-size: var(--normal-font-size);
+    gap: 0.5rem;
+    font-size: var(--p2-Paragraph);
+    text-transform: capitalize;
+}
+.mainbtnSec img {
+   width: fit-content !important;
+}
+.mainbtn img {
+   width: fit-content !important;
 }
 
 
@@ -39,14 +49,11 @@
 
     .mainbtn {
         padding: 10px 10px;
-        font-size: var(--normal-font-size);
-    }
-    
-    .mainbtnSec {
-        font-size: var(--normal-font-size);
-        padding: 10px 10px;
     }
 
+    .mainbtnSec {
+        padding: 10px 10px;
+    }
 
 }
 

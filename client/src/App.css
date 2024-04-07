@@ -1,19 +1,16 @@
 @font-face {
   font-family: 'sfregular';
-  src: url("client/src/assets/fonts/SFPRODISPLAYREGULAR.woff") format('woff'),
-    url("client/src/assets/fonts/HelveticaNeueLight.woff") format('woff');
+  src: url("client/src/assets/fonts/SFPRODISPLAYREGULAR.woff") format('woff')
 }
 
 @font-face {
   font-family: 'sfmedium';
-  src: url("client/src/assets/fonts/SFPRODISPLAYMEDIUM.woff") format('woff'),
-    url("client/src/assets/fonts/HelveticaNeueMedium.woff") format('woff');
+  src: url("client/src/assets/fonts/SFPRODISPLAYMEDIUM.woff") format('woff')
 }
 
 @font-face {
   font-family: 'sfbold';
-  src: url("client/src/assets/fonts/SFPRODISPLAYBOLD.woff") format('woff'),
-    url("client/src/assets/fonts/HelveticaNeueBold.woff") format('woff');
+  src: url("client/src/assets/fonts/SFPRODISPLAYBOLD.woff") format('woff')
 }
 
 * {
@@ -27,6 +24,7 @@ body {
   background: var(--dark-background-color);
   height: 100%;
   width: 100%;
+  color: var(--text-color);
   overflow-x: hidden;
 }
 
@@ -47,7 +45,7 @@ body {
   /* color shades */
   --text-color: #FFFFFF;
   --background-color: #171910;
-  --dark-background-color: #19191B;
+  --dark-background-color: #111111;
   --decorate-color: #BACC4A;
   --light-decorate-color: #E6F1B9;
   --light-gray-color: #A9AAB3;
@@ -145,6 +143,9 @@ section {
   position: absolute;
   content: url("client/src/assets/images/rightarrow 15.svg") !important;
 }
+.owl-carousel .owl-item img {
+  width: fit-content;
+}
 
 
 
@@ -232,7 +233,7 @@ section {
 }
 
 .carousel-indicators .active {
-  padding: .3rem !important;
+  padding: .1rem !important;
   background: var(--decorate-color) !important;
 }
 
@@ -240,13 +241,14 @@ section {
   box-sizing: content-box;
   border-radius: 50%;
   width: 10px !important;
-  height: 10px !important;
+  height:10px !important;
   border: 0 !important;
+  background: rgba(255, 255, 255, 0.659);
 }
 
 .carousel-indicators {
   align-items: center !important;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .carousel-control-prev-icon {
@@ -271,6 +273,7 @@ section {
 .pcontainer h2 {
   font-size: var(--h3-Heading);
   font-family: sfbold;
+  font-weight: 800;
   line-height: 2rem;
   color: var(--background-color);
 }
@@ -288,9 +291,10 @@ section {
 
 .SectionLable {
   color: var(--text-color);
-  font-size: var(--h4-Heading);
+  font-size: var(--h3-Heading);
+  font-weight: 800;
+  cursor: pointer;
 }
-
 
 
 
@@ -567,18 +571,19 @@ section {
 }
 
 .cardContainer {
-  height: 350px;
   width: 100%;
   gap: 1rem;
   margin: 1rem 0;
 }
 
 .cardContainer .card {
-  height: 100%;
+  height: 348px ;
   width: 100%;
+  border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat !important;
   background-size: cover;
+  background-color: transparent;
 }
 
 .watchlistCards {
@@ -617,11 +622,6 @@ progress {
 
 /* big screen  */
 
-@media screen and (min-width:1400px) {
-  .container {
-    max-width: 1400px;
-  }
-}
 
 @media screen and (min-width:1024px) {
   .Rright {
@@ -640,16 +640,27 @@ progress {
     padding: 2rem;
     width: 100vw;
   }
+  .watchlistCards{
+    flex-direction: column;
+  }
+  .watchlistCards > .watchlistCard{
+    width: 100%;
+  }
 
 }
 
 /* tablets screen  */
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+
+}
 
 /* mobiles screen  */
 
 @media screen and (max-width:428px) {
-
+.cardHeaders{
+  flex-direction: column;
+  align-items: flex-start;
+}
   .Rleft {
     padding: 3rem 1rem;
   }
@@ -684,6 +695,12 @@ progress {
     bottom: 10%;
     left: 0%;
     /* transform: translate(0% , -10%); */
+  }
+  .watchlistCards{
+    flex-direction: column;
+  }
+  .watchlistCards .watchlistCard{
+    width: 100%;
   }
 
   .carousel-control-next,

@@ -3,7 +3,7 @@
     width: 100%;
     gap: 3rem;
     padding: 2rem;
-    justify-content: flex-start !important;
+    justify-content: flex-start !important;;
 }
 .CuratedCards span{
     color: var(--text-color) ;
@@ -16,7 +16,7 @@
     min-width: 300px;
     border-radius: 25px;
     padding: 1rem;
-    background-position: center !important;
+    background-position: bottom !important;
     background-size: cover !important;
     /* margin: 0 2rem ; */
 }
@@ -63,6 +63,9 @@
 }
 .CuratedCards .card:hover .CardContainer{
     transform: translateY(0rem);
+}
+.SectionLablediv{
+    padding: 0 2rem 0 0;
 }
 
 @media screen and (max-width: 768px) {

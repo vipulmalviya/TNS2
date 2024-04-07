@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
-import "./WatchlistPage.css";
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Button from "./../components/buttons/Button.jsx";
 import ButtonSec from "./../components/buttons/ButtonSec.jsx";
 import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
-
+import { IoIosArrowForward } from "react-icons/io";
 
 
 const arr = [
   {
-    img: "client/src/assets/images/7c40e7950bccd488ce91b53447207cad.png",
+    img: "client/src/assets/images/oppenheimer.png",
   },
   {
-    img: "client/src/assets/images/7c40e7950bccd488ce91b53447207cad.png",
+    img: "client/src/assets/images/sambhadur.png",
   },
   {
-    img: "client/src/assets/images/7c40e7950bccd488ce91b53447207cad.png",
+    img: "client/src/assets/images/96ec47c5bba1a99388ccc5c88666398e.png",
+  },
+  {
+    img: "client/src/assets/images/da92a39b19b38d7c9b6e839bfff30d13.png",
   }
 
 ]
@@ -82,34 +84,46 @@ const WatchlistPage = () => {
           </div>
           <div className='watchlistCards d-flex'>
             <div className="watchlistCard">
-              <div className='gap-2'>
+              <div className='gap-2 d-flex align-items-center justify-content-between'>
                 <h3>Crime - Thriller Movies</h3>
-                <div className="moreBtn"></div>
+                <div className="moreBtn"><img src="client/src/assets/images/Icon (7).svg" alt="" /></div>
               </div>
-              <div className='cardContainer d-flex'>
+              <OwlCarousel className='cardContainer d-flex '
+                items={5}
+                margin={10}
+                nav={false}
+                dots={false}
+                autoplay={true}
+                autoplayHoverPause={true}
+               >
                 {arr.map((elem, index) =>
                   <div className='card d-flex' key={index} style={{ backgroundImage: `url(${elem.img})` }}>
-
                   </div>
                 )}
-              </div>
+              </OwlCarousel>
               <div className='range'>
                 <p>5 Titles Watched out of 10 till Feb</p>
                 <progress id="file" value="20" max="100" />
               </div>
             </div>
             <div className="watchlistCard">
-              <div className='gap-2'>
+              <div className='gap-2 d-flex align-items-center justify-content-between'>
                 <h3>Crime - Thriller Movies</h3>
-                <div className="moreBtn"></div>
+                <div className="moreBtn"><img src="client/src/assets/images/Icon (7).svg" alt="" /></div>
               </div>
-              <div className='cardContainer d-flex'>
+              <OwlCarousel className='cardContainer d-flex '
+                items={5}
+                margin={5}
+                nav={false}
+                dots={false}
+                autoplay={true}
+                autoplayHoverPause={true}
+                >
                 {arr.map((elem, index) =>
                   <div className='card d-flex' key={index} style={{ backgroundImage: `url(${elem.img})` }}>
-
                   </div>
                 )}
-              </div>
+              </OwlCarousel>
               <div className='range'>
                 <p>5 Titles Watched out of 10 till Feb</p>
                 <progress id="file" value="20" max="100" />
@@ -122,7 +136,7 @@ const WatchlistPage = () => {
         <div className="container">
           <div className='cardHeaders d-flex'>
             <h2>Previously Watched Titles</h2>
-            <div className="seeAllBtn">See All</div>
+            <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="client/src/assets/images/tir.svg" alt="" /></span></span>
           </div>
           <OwlCarousel className="MovieCards d-flex"
             items={5}
@@ -137,12 +151,10 @@ const WatchlistPage = () => {
                 nav: false,
               },
               768: {
-                items: 3,
-                nav: false,
+                items: 2,
               },
               1000: {
                 items: 4,
-                nav: false,
               },
             }}>
             {data.map((elem, index) => <div className="card " key={index}>
@@ -166,7 +178,6 @@ const WatchlistPage = () => {
         <div className="container">
           <div className='cardHeaders d-flex'>
             <h2>Top Suggestions Matches with your Taste</h2>
-            <div className="seeAllBtn">See All</div>
           </div>
           <OwlCarousel className="MovieCards d-flex"
             items={5}
@@ -181,12 +192,10 @@ const WatchlistPage = () => {
                 nav: false,
               },
               768: {
-                items: 3,
-                nav: false,
+                items: 2,
               },
               1000: {
                 items: 4,
-                nav: false,
               },
             }}>
             {data.map((elem, index) => <div className="card" key={index}>
@@ -206,7 +215,7 @@ const WatchlistPage = () => {
           </OwlCarousel>
         </div>
       </section>
-      <CuratedSlider title={"Curated Lists Just For You"}/>
+      <CuratedSlider title={"Curated Lists Just For You"} />
 
     </>
 

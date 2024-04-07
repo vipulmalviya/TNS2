@@ -1,13 +1,11 @@
 .HandCards {
     position: relative;
     width: 100%;
-    gap: 3rem;
-    padding: 2rem;
     justify-content: flex-start !important;
 }
 
 .HandCards .owl-stage-outer {
-    padding-left: 2rem;
+    padding-left: 4rem;
 }
 
 .HandCards .card {
@@ -17,6 +15,10 @@
     padding: 1rem;
     background: transparent;
     border: none;
+}
+.HandCards .card > img {
+    height: 348px !important;
+    width: 245px !important;
 }
 
 .HandCards .card h1 {

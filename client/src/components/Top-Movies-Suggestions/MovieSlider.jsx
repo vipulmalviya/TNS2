@@ -4,6 +4,7 @@ import OwlCarousel from 'react-owl-carousel';
 import Card from '../card/Card.jsx';
 import useFetch from '../fetch/useFetch.jsx';
 import { Link } from 'react-router-dom';
+import { IoIosArrowForward } from 'react-icons/io';
 
 
 
@@ -94,8 +95,8 @@ const MovieSlider = ({ title, type }) => {
 
     return (
         <section>
-            <div className="container">
-                <h3 className='SectionLable'>{title}{">"}</h3>
+            <div className="container-lg ">
+                <h3 className='SectionLable '>{title} <IoIosArrowForward /></h3>
                 { <OwlCarousel className="MovieCards flex"
                     items={5}
                     margin={10}
@@ -112,7 +113,7 @@ const MovieSlider = ({ title, type }) => {
                             items: 2,
                         },
                         1000: {
-                            items: 4.5,
+                            items: 4,
                         }
                     }}>
                     {Lcard.map((elem) =>
