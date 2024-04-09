@@ -258,6 +258,9 @@ section {
 .carousel-control-next-icon {
   background-image: url("client/src/assets/images/rightarrow 15.svg");
 }
+.movieLogo{
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.513));
+}
 
 /* Craft Your Watchlist */
 
@@ -294,6 +297,8 @@ section {
   font-size: var(--h3-Heading);
   font-weight: 800;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 

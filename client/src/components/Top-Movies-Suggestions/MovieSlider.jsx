@@ -30,48 +30,102 @@ const MovieSlider = ({ title, type }) => {
     const Lcard = [
         {
             id: 1,
-            original_title:"Saltburn",
-            poster_path: "client/src/assets/images/openhaimer.jpg",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
+            original_title: "The Godfather",
+            Genre: [
+                "Crime, ",
+                "Drama"
+            ],
+            Runtime: "2h 55m",
+            Censor_Rating: "CBFC: R",
+            Release_Date: "1972",
+            Directed_By: "Francis Ford Coppola",
+            Written_By: "Mario Puzo & Francis Ford Coppola",
+            Cinematograhy: "Gordon Willis",
+            Accolades: "Nominated & won Oscar's for Best Picture, Best Actor, Best Adapted Screenplay",
+            Plot: "Don Vito Corleone, head of a mafia family, decides to hand over his empire to his youngest son, Michael. However, his decision unintentionally puts the lives of his loved ones in grave danger.",
+            Abailibility_in_india: "On Subs: Prime Video",
+            poster_path: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
             popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             id: 2,
-            original_title:"Killers of the Flower Moon",
-            poster_path: "client/src/assets/images/949842150786a7e1e3aeee4a1b3be7bd.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
+            original_title: "The Godfather 2",
+            Genre: [
+                "Crime, ",
+                "Drama"
+            ],
+            Runtime: "3h 22m",
+            Censor_Rating: "CBFC: A",
+            Release_Date: "1974",
+            Directed_By: "Francis Ford Coppola",
+            Written_By: "Mario Puzo & Francis Ford Coppola",
+            Cinematograhy: "Gordon Willis",
+            Accolades: "Nominated & won Oscar's for Best Picture, Best Actor, Best Adapted Screenplay",
+            Plot: "Vito's popularity in the underworld is on the rise, while his son, Michael's career is swinging downwards. In order to redeem himself, Michael must fight his enemies, including his own brother.",
+            Abailibility_in_india: "On Subs: Prime Video",
+            poster_path: "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
             popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             id: 3,
-            original_title:"12th Fail",
-            original_name:"hero no 2",
-            poster_path: "client/src/assets/images/da92a39b19b38d7c9b6e839bfff30d13.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
+            original_title: "The Godfather 3",
+            Genre: [
+                "Crime, ",
+                "Drama"
+            ],
+            Runtime: "2h 42m",
+            Censor_Rating: "CBFC: R",
+            Release_Date: "1990",
+            Directed_By: "Francis Ford Coppola",
+            Written_By: "Mario Puzo & Francis Ford Coppola",
+            Cinematograhy: "Gordon Willis",
+            Accolades: "Nominated & won Oscar's ",
+            Plot: "Michael Corleone decides to put an end to all the criminal activities his family is involved in. However, the mob leader refuses to let him go. Also, his nephew wants a piece of his criminal empire.",
+            Abailibility_in_india: "On Rent: YouTube",
+            poster_path: "https://m.media-amazon.com/images/M/MV5BNWFlYWY2YjYtNjdhNi00MzVlLTg2MTMtMWExNzg4NmM5NmEzXkEyXkFqcGdeQXVyMDk5Mzc5MQ@@._V1_.jpg",
             popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+        },
+        {
+            id: 4,
+            original_title: "2001: A Space Odyssey ",
+            Genre: [
+                "Adventure, ",
+                "Sci-Fi"
+
+            ],
+            Runtime: "2h 29m",
+            Censor_Rating: "CBFC: U",
+            Release_Date: "1968",
+            Directed_By: "Stanley Kubrick",
+            Written_By: "Stanley Kubrick & Arthur C. Clarke",
+            Cinematograhy: "Geoffrey Unsworth",
+            Accolades: "Nominated & Won Oscar's for Best Special Visual Effects",
+            Plot: "Humanity discovers a mystifying, artificial object buried underneath the lunar surface. With the assistance of HAL 9000, an intelligent computer, mankind embarks on an interesting quest.",
+            Abailibility_in_india: "On Rent - Prime, Apple Tv, Google Movies",
+            poster_path: "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png",
+            popularity: "91.5",
         },
         {
             id: 5,
-            original_title:"Barbie",
-            original_name:"hero no 2",
-            poster_path: "client/src/assets/images/7c40e7950bccd488ce91b53447207cad.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
+            original_title: "The shining",
+            Genre: [
+                "Psychological, " ,
+                "Horror"
+            ],
+            Runtime: "2h 16m",
+            Censor_Rating: "CBFC: A",
+            Release_Date: "1980",
+            Directed_By: "Stanley Kubrick",
+            Written_By: "Stanley Kubrick & Diane Johnson",
+            Cinematograhy: "John Alcott",
+            Accolades: "Award for Worst Director & Actress",
+            Plot: "Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.",
+            Abailibility_in_india: "On Rent - Prime, Apple Tv, Google Movies, YouTube",
+            poster_path: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1uTHLLpBhlXQEVDzar5kTUuDxo99jueJWXgVeTaQN1N6N58Tq",
             popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
         },
-        {
-            id: 6,
-            original_title:"Three of us",
-            original_name:"hero no 2",
-            poster_path: "client/src/assets/images/openhaimer.jpg",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
-        }
-        ];
+
+    ];
     // const { data, loading } = useFetch(`/discover/${type}`)
 
     // const skItem = () => {
@@ -97,7 +151,7 @@ const MovieSlider = ({ title, type }) => {
         <section>
             <div className="container-lg ">
                 <h3 className='SectionLable '>{title} <IoIosArrowForward /></h3>
-                { <OwlCarousel className="MovieCards flex"
+                {<OwlCarousel className="MovieCards flex"
                     items={5}
                     margin={10}
                     nav={true}
@@ -117,7 +171,7 @@ const MovieSlider = ({ title, type }) => {
                         }
                     }}>
                     {Lcard.map((elem) =>
-                        <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory="movie" watch={elem.popularity} />
+                        <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} />
                     )}
                 </OwlCarousel>}
             </div>

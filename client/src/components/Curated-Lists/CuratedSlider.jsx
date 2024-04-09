@@ -5,26 +5,27 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Button from '../buttons/Button';
 import { IoIosArrowForward } from 'react-icons/io';
+import { MdArrowForward } from 'react-icons/md';
 
 const CuratedSlider = ({ title }) => {
     const Lcard = [
         {
             cardID: 1,
-            poster: "client/src/assets/images/949842150786a7e1e3aeee4a1b3be7bd.png",
+            poster: "client/src/assets/images/openhaimer.jpg",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 2,
-            poster: "client/src/assets/images/299c4228c5a9a0bad5783800b7cff179.png",
+            poster: "client/src/assets/images/Sambhadur.png",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 3,
-            poster: "client/src/assets/images/299c4228c5a9a0bad5783800b7cff179.png",
+            poster: "client/src/assets/images/dune.png",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
@@ -67,6 +68,7 @@ const CuratedSlider = ({ title }) => {
                             <p>{elem.paragraph}</p>
                             <Button>
                                 See All Titles
+                                <MdArrowForward />
                             </Button>
                         </div>
                     </div>)}

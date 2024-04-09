@@ -34,46 +34,43 @@ const HandSlider = ({ title, type }) => {
     const Lcard = [
         {
             id: 1,
-            original_title: "hero no 1",
-            poster_path: "client/src/assets/images/openhaimer.jpg",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+            poster_path: "client/src/assets/images/saltburn.png",
         },
         {
             id: 2,
-            original_title: "hero no 1",
-            poster_path: "client/src/assets/images/949842150786a7e1e3aeee4a1b3be7bd.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+            poster_path: "client/src/assets/images/KillersOfTheFlowerMoon.png",
         },
         {
             id: 3,
-            original_title: "hero no 1",
-            original_name: "hero no 2",
-            poster_path: "client/src/assets/images/da92a39b19b38d7c9b6e839bfff30d13.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+            poster_path: "client/src/assets/images/12fail.png",
+        },
+        {
+            id: 4,
+            poster_path: "client/src/assets/images/Barbie.png",
         },
         {
             id: 5,
-            original_title: "hero no 1",
-            original_name: "hero no 2",
-            poster_path: "client/src/assets/images/7c40e7950bccd488ce91b53447207cad.png",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+            poster_path: "client/src/assets/images/ThreeOfUs.png",
         },
         {
             id: 6,
-            original_title: "hero no 1",
-            original_name: "hero no 2",
-            poster_path: "client/src/assets/images/openhaimer.jpg",
-            content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
-            popularity: "91.5",
-            paragraph: "6 Movies Ranked According to TNS Score",
+            poster_path: "client/src/assets/images/Sambhadur.png",
+        },
+        {
+            id: 7,
+            poster_path: "client/src/assets/images/wonka.png",
+        },
+        {
+            id: 8,
+            poster_path: "client/src/assets/images/salaar.png",
+        },
+        {
+            id: 9,
+            poster_path: "client/src/assets/images/killerSoup.png",
+        },
+        {
+            id: 10,
+            poster_path: "client/src/assets/images/napoleo.png",
         },
     ];
 

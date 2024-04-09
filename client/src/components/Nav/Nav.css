@@ -26,24 +26,26 @@ nav .left {
 }
 
 .navM {
-    width: 100%;
+    width: 60%;
     display: flex;
 }
 
 .navM form {
     position: relative;
-    border: 1px solid #c2bebe5a;
+    border: 1.5px solid #c2bebe5a;
     color: var(--text-color);
     outline: none;
     padding: 1rem;
-    width: 350px;
+    width:500px;
     border-radius: 12px;
-    height: 35px;
+    height: 60%;
+    background-color: #0e0e1038 ;
 }
 
-.navM form img {
+.navM form svg {
+    font-size: 25px;
     position: absolute;
-    left: 10%;
+    left: 5%;
     cursor: pointer;
 }
 
@@ -52,9 +54,11 @@ nav .left {
     color: var(--text-color);
     border: none;
     outline: none;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 1rem 0rem 1rem 3rem;
+    margin: 0rem 10rem 0rem 0rem;
     background: transparent;
 }
+
 
 nav .right {
     padding: 1rem;
@@ -72,6 +76,8 @@ nav .right {
 }
 
 .Watchlist p {
+    cursor: pointer;
+    font-size: var(--p2-Paragraph);
     margin: 0;
 }
 
