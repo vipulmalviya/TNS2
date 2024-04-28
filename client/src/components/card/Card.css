@@ -1,13 +1,13 @@
-.MovieCards .card {
+.singlecard {
     min-height: 300px;
-    width: 400px;
-    padding: 1rem;
-    background: transparent;
+    max-width: 350px;
+    /* background: red !important; */
+    padding: 2rem;
+    background: transparent ;
     color: var(--text-color);
     border: none;
-}
-
-.MovieCards .card > img {
+} 
+.singlecard > img {
     /* height: 100%;
     width: 100%; */
     border-radius: 25px !important;
@@ -61,17 +61,17 @@
 }
 
 @media screen and (max-width: 900px) {
-    .MovieCards .card {
+    .singlecard {
         min-width: 100%;
     }
 
 }
 @media screen and (max-width: 428px) {
-    .MovieCards {
+    /* .MovieCards {
         padding: 1rem;
-    }
+    } */
 
-    .MovieCards .card {
+ .singlecard {
         padding: 0rem !important;
         max-width:300px !important;
     }

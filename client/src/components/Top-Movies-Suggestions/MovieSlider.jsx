@@ -171,7 +171,7 @@ const MovieSlider = ({ title, type }) => {
                         }
                     }}>
                     {Lcard.map((elem) =>
-                        <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} />
+                        <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} btn={true} />
                     )}
                 </OwlCarousel>}
             </div>

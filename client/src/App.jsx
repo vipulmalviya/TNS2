@@ -6,6 +6,7 @@ import Nav from './components/Nav/Nav.jsx';
 import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import WatchlistPage from './pages/WatchlistPage.jsx';
+import SingleMoviePage from './pages/SingleMoviePage.jsx';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/" element={<Home />} />
         <Route exact path="/WatchlistPage" element={<WatchlistPage />} />
+        <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
       </Routes>
       <Footer />
     </Router>

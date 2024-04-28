@@ -63,7 +63,7 @@ nav .left {
 nav .right {
     padding: 1rem;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center !important;
     height: 100%;
     width: 30%;
 }
@@ -199,9 +199,12 @@ nav .right {
         display: none;
     }
 
+    nav .left  {
+        justify-content: center !important;
+        align-items: center !important;
+    }
     .logo img {
         width: 70px;
-        height: 70px;
     }
 
     .Watchlist img {
@@ -233,5 +236,13 @@ nav .right {
 
     nav {
         padding: 0rem 0rem;
+    }
+
+    .hamburgur {
+        cursor: pointer;
+        color: white;
+        font-size: 1rem;
+        width: fit-content !important;
+        margin: 0rem;
     }
 }

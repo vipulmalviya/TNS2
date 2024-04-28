@@ -3,7 +3,7 @@ import "./Button.css"
 
 const ButtonSec = ({ children }) => {
     return (
-        <button className='mainbtnSec  d-flex'>
+        <button className='mainbtnSec align-items-center d-flex'>
             {children}
         </button>
     )

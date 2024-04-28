@@ -10,9 +10,9 @@ import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
 import { IoIosArrowForward } from 'react-icons/io';
 import { FaPlay } from 'react-icons/fa';
 import Card from '../components/card/Card.jsx';
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 const Home = () => {
 
   const Lcard = [
@@ -116,9 +116,14 @@ const Home = () => {
       <section className='homeCarousel position-relative'>
         <Carousel className='w-100' >
           {Lcard.map((elem, index) => <Carousel.Item key={index}>
-            <img style={{ height: "100vh", width: "100%", objectFit: "cover", }} src={elem.poster_path} alt="" />
+            <Link rel="stylesheet" to="/SingleMoviePage">
+              <img style={{ height: "100vh", width: "100%", objectFit: "cover", }} src={elem.poster_path} alt="" />
+            </Link>
             <Carousel.Caption className='Caption d-flex flex-column justify-content-center align-items-start'>
-              <img height={"100%"} width={"100%"} src={elem.Titlelogo} alt="" className='mb-3 movieLogo'></img>
+              <Link rel="stylesheet" to="/SingleMoviePage">
+                <img height={"100%"} width={"100%"} src={elem.Titlelogo} alt="" className='mb-3 movieLogo'></img>
+              </Link>
+
               <div className='w-100 aboutMovie d-flex justify-content-start align-items-center mb-2'>
                 <p className='mb-0'>{elem.Genre}</p>
                 <p className='mb-0'>{elem.Release_Date}</p>
@@ -157,9 +162,9 @@ const Home = () => {
       <HandSlider />
       <MovieSlider type={"movie"} title={"Top Movies Suggestions "} />
       <MovieSlider type={"tv"} title={"Top Tv Series Suggestions"} />
-      <section className='container position-relative '>
+      {/* <section className='container position-relative '>
         <div className="slides w-100 overflow-x-scroll text-nowrap">
-          <OwlCarousel className=" w-100  d-flex gap-2 cursor-pointer ">
+          <OwlCarousel className=" w-100  d-flex gap-2 cursor-pointer">
             <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
             <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
             <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
@@ -171,7 +176,7 @@ const Home = () => {
             <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
           </OwlCarousel>
         </div>
-      </section>
+      </section> */}
       <CuratedSlider title={"Curated Lists Just For You "} />
     </Fragment >
   )
