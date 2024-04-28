@@ -7,6 +7,7 @@ import Login from './pages/Login.jsx';
 import Register from './pages/Register.jsx';
 import WatchlistPage from './pages/WatchlistPage.jsx';
 import SingleMoviePage from './pages/SingleMoviePage.jsx';
+import { CuratedPage } from './pages/CuratedPage.jsx';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/WatchlistPage" element={<WatchlistPage />} />
         <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
+        <Route path="/CuratedPage" element={<CuratedPage />} />
       </Routes>
       <Footer />
     </Router>

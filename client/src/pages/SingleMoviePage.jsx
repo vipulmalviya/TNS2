@@ -6,6 +6,7 @@ import Button from '../components/buttons/Button.jsx';
 import ButtonSec from '../components/buttons/ButtonSec.jsx';
 import MovieSlider from '../components/Top-Movies-Suggestions/MovieSlider'
 import { FaPlay, FaPlus, FaSpotify } from 'react-icons/fa';
+import { LuPlus } from 'react-icons/lu';
 
 
 
@@ -29,7 +30,7 @@ const SingleMoviePage = () => {
                 <p className='mb-0'>stream now</p>
               </Button>
               <ButtonSec>
-                <FaPlus />
+                <LuPlus />
                 <p className='mb-0'>add to watchlist</p>
               </ButtonSec>
               <ButtonSec>

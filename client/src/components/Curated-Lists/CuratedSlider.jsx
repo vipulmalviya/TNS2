@@ -6,6 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Button from '../buttons/Button';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdArrowForward } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const CuratedSlider = ({ title }) => {
     const Lcard = [
@@ -36,7 +37,7 @@ const CuratedSlider = ({ title }) => {
             <div className="container">
                 <div className='SectionLablediv d-flex justify-content-between align-items-center'>
                     <h3 className='SectionLable'>{title}<IoIosArrowForward /></h3>
-                    <span className="d-flex align-items-center justify-content-center gap-2" style={{color: "white", cursor: "pointer"}}>See All <span><img height="100%" width="100%" src="client/src/assets/images/tir.svg" alt="" /></span></span>
+                    <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="client/src/assets/images/tir.svg" alt="" /></span></span>
                 </div>
                 <OwlCarousel className="CuratedCards d-flex"
                     items={4}
@@ -57,21 +58,24 @@ const CuratedSlider = ({ title }) => {
                             items: 3,
                         },
                     }}>
-                    {Lcard.map((elem, index) => <div className="card d-flex" key={index} style={{
-                        background: `linear-gradient(to top, black, transparent), url(${elem.poster})`,
-                    }}>
-                        <div className='CardContainer'>
-                            <div className="tag">
-                                Curated List
+                    {Lcard.map((elem, index) => <Link to="/curatedPage">
+                        <div className="card d-flex" key={index} style={{
+                            background: `linear-gradient(to top, black, transparent), url(${elem.poster})`,
+                        }}>
+                            <div className='CardContainer'>
+                                <div className="tag">
+                                    Curated List
+                                </div>
+                                <h3>{elem.content}</h3>
+                                <p>{elem.paragraph}</p>
+                                <Button>
+                                    See All Titles
+                                    <MdArrowForward />
+                                </Button>
                             </div>
-                            <h3>{elem.content}</h3>
-                            <p>{elem.paragraph}</p>
-                            <Button>
-                                See All Titles
-                                <MdArrowForward />
-                            </Button>
                         </div>
-                    </div>)}
+                    </Link>
+                    )}
                 </OwlCarousel>
             </div>
         </section>
