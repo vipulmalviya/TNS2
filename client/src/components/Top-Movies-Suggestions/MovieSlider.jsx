@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import "./movieSlider.css";
-import OwlCarousel from 'react-owl-carousel';
+// import OwlCarousel from 'react-owl-carousel';
 import Card from '../card/Card.jsx';
 import useFetch from '../fetch/useFetch.jsx';
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
-
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 
@@ -124,6 +125,25 @@ const MovieSlider = ({ title, type }) => {
             poster_path: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1uTHLLpBhlXQEVDzar5kTUuDxo99jueJWXgVeTaQN1N6N58Tq",
             popularity: "91.5",
         },
+        {
+            id: 6,
+            original_title: "The shining",
+            Genre: [
+                "Psychological, " ,
+                "Horror"
+            ],
+            Runtime: "2h 16m",
+            Censor_Rating: "CBFC: A",
+            Release_Date: "1980",
+            Directed_By: "Stanley Kubrick",
+            Written_By: "Stanley Kubrick & Diane Johnson",
+            Cinematograhy: "John Alcott",
+            Accolades: "Award for Worst Director & Actress",
+            Plot: "Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.",
+            Abailibility_in_india: "On Rent - Prime, Apple Tv, Google Movies, YouTube",
+            poster_path: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1uTHLLpBhlXQEVDzar5kTUuDxo99jueJWXgVeTaQN1N6N58Tq",
+            popularity: "91.5",
+        },
 
     ];
     // const { data, loading } = useFetch(`/discover/${type}`)
@@ -147,33 +167,53 @@ const MovieSlider = ({ title, type }) => {
     //     )
     // }
 
+    const responsive = {
+        superlargedesktop: {
+          breakpoint: { max: 4000, min: 1024 },
+          items: 5,
+        },
+        desktop: {
+          breakpoint: { max: 1024, min: 800 },
+          items: 4.5,
+        },
+        tablet: {
+          breakpoint: { max: 800, min: 464 },
+          items: 2.5,
+        },
+        mobile: {
+            // margin:"200px",
+          breakpoint: { max: 464, min: 0 },
+          items: 1,
+        }
+      };
     return (
         <section>
-            <div className="container-lg ">
+            <div className="container ">
                 <h3 className='SectionLable '>{title} <IoIosArrowForward /></h3>
-                {<OwlCarousel className="MovieCards flex"
-                    items={5}
-                    margin={10}
-                    nav={true}
-                    dots={false}
-                    autoplay={true}
-                    autoplayHoverPause={true}
-                    responsive={{
-                        0: {
-                            items: 1,
-                            nav: false,
-                        },
-                        768: {
-                            items: 2,
-                        },
-                        1000: {
-                            items: 4,
-                        }
-                    }}>
+                {<Carousel className="MovieCards flex"
+                  responsive={responsive}
+                    // margin={10}
+                    // nav={true}
+                    // dots={false}
+                    // autoplay={false}
+                    // // autoplayHoverPause={true}
+                    // responsive={{
+                    //     0: {
+                    //         items: 1,
+                    //         nav: false,
+                    //     },
+                    //     768: {
+                    //         items: 2,
+                    //     },
+                    //     1000: {
+                    //         items: 4,
+                    //     }
+                    // }}
+                    >
                     {Lcard.map((elem) =>
                         <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} btn={true} />
                     )}
-                </OwlCarousel>}
+                </Carousel>}
             </div>
         </section>
     )

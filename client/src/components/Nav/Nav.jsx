@@ -21,9 +21,9 @@ const Nav = () => {
                 </div>
                 <div className="navM align-items-center justify-content-center">
                     <form action="" className='d-flex align-items-center justify-content-center'>
-                    <CiSearch />
+                        <CiSearch />
                         <input
-                            type="text" placeholder='Search for anything... '/>
+                            type="text" placeholder='Search for anything... ' />
                     </form>
                 </div>
                 <div className="right d-flex">

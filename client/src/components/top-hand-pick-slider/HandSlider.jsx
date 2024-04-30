@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import "./HandSlider.css"
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import useFetch from '../../components/fetch/useFetch.jsx';
 import { IoIosArrowForward } from 'react-icons/io';
 
@@ -74,38 +76,38 @@ const HandSlider = ({ title, type }) => {
         },
     ];
 
+    const responsive = {
+        superlargedesktop: {
+            breakpoint: { max: 4000, min: 1024 },
+            items: 4,
+        },
+        desktop: {
+            breakpoint: { max: 1024, min: 800 },
+            items: 3.5,
+        },
+        tablet: {
+            breakpoint: { max: 800, min: 464 },
+            items: 2.5,
+        },
+        mobile: {
+            // margin:"200px",
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+        }
+    };
+
     return (
         <section>
             <div className="container">
                 <h3 className='SectionLable '>Top Hand-Pick Suggestions <IoIosArrowForward /> </h3>
-                <OwlCarousel className="HandCards d-flex"
-                    items={4}
-                    margin={20}
-                    responsiveClass={false}
-                    nav={true}
-                    autoplay={false}
-                    dots={false}
-                    autoplayHoverPause={false}
-                    responsive={{
-                        0: {
-                            items: 1,
-                            // margin:250,
-                            nav: false,
-                        },
-                        800: {
-                            items: 2,
-                            // margin: 100,
-                        },
-                        1000: {
-                            items: 3,
-                        }
-
-                    }}>
+                <Carousel className="HandCards d-flex"
+                    responsive={responsive}
+                >
                     {Lcard.map((elem, index) => <div className="card d-flex align-align-items-center justify-content-center" key={index}>
                         <h1 className='d-flex align-align-items-center justify-content-center'>{index + 1}</h1>
                         <img height={"100%"} width={"100%"} src={elem.poster_path} alt="" />
                     </div>)}
-                </OwlCarousel>
+                </Carousel>
             </div>
         </section>
     )

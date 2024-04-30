@@ -1,8 +1,8 @@
 .singlecard {
     min-height: 300px;
-    max-width: 350px;
+    max-width: 350px ;
     /* background: red !important; */
-    padding: 2rem;
+    padding: 1rem;
     background: transparent ;
     color: var(--text-color);
     border: none;
@@ -59,21 +59,13 @@
     display: flex;
     align-self: flex-end;
 }
+@media screen and (max-width: 768px) {
 
-@media screen and (max-width: 900px) {
-    .singlecard {
-        min-width: 100%;
-    }
 
 }
 @media screen and (max-width: 428px) {
-    /* .MovieCards {
-        padding: 1rem;
-    } */
-
+   
  .singlecard {
-        padding: 0rem !important;
-        max-width:300px !important;
+        padding: 1rem !important;
     }
-
 }

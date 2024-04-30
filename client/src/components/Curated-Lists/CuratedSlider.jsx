@@ -44,8 +44,8 @@ const CuratedSlider = ({ title }) => {
                     margin={20}
                     nav={false}
                     dots={false}
-                    autoplay={true}
-                    autoplayHoverPause={true}
+                    autoplay={false}
+                    autoplayHoverPause={false}
                     responsive={{
                         0: {
                             items: 1,

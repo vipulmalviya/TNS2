@@ -11,7 +11,11 @@
 .HandCards .card {
     position: relative;
     min-height: 450px;
-    max-width: 300px;
+    min-width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
     padding: 1rem;
     background: transparent;
     border: none;
@@ -26,15 +30,14 @@
     text-transform: capitalize;
     background: linear-gradient(to top, #C2C1C194, #FFFFFF);
     -webkit-background-clip: text;
+    letter-spacing: -1.5rem;
     background-clip: text;
     color: transparent !important;
     font-family: sfbold;
-    position: absolute;
     width: fit-content;
     height: fit-content;
     top: 50%;
-    left: 0%;
-    transform: translate(-70%, -50%);
+    transform: translate(20%, 0%);
     margin-bottom: 0 !important;
 }
 
@@ -68,30 +71,6 @@
     content: url("client/src/assets/images/leftarrow.svg") !important;
 }
 
-.owl-next span {
-    font-size: 10rem;
-    font-weight: 100 !important;
-    font-family: "system-ui";
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.575) !important;
-    content: url("client/src/assets/images/rightarrow 15.svg") !important;
-}
-
-
-.owl-next {
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 5rem;
-    position: absolute;
-    right: -5%;
-    top: 40%;
-    font-weight: 100 !important;
-    transform: translate(0%, -30%);
-    z-index: 10;
-}
-
-
 @media screen and (max-width: 1280px) {
     .HandCards {
         padding: 1rem;
@@ -104,15 +83,11 @@
 }
 
 @media screen and (max-width: 900px) {
-    .HandCards .owl-stage-outer {
-        padding-left: 0rem !important;
-    }
-
     .HandCards .card {
         position: relative;
-        height: 400px;
+        min-height: 350px !important;
         max-width: 100%;
-        padding: 0em;
+        padding: 0rem;
         background: transparent;
     }
 
@@ -120,35 +95,18 @@
         position: absolute;
         font-size: 10rem;
         top: 80% !important;
-        left: 25% !important;
+        left: 0% !important;
         z-index: 3;
         background: linear-gradient(to bottom, white, black);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent !important;
-        /* transform: translate(0%, 0%); */
-        transition: all ease-in .3s;
-    }
-
-    .HandCards .card:hover h1 {
-        top: 75% !important;
-    }
-
-    .HandCards .card img {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        border-radius: 25px !important;
-        object-fit: cover;
-        z-index: 2;
+        transform: translate(0%, -50%);
+        letter-spacing: 1rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .HandCards .owl-stage-outer {
-        padding-left: 3rem;
-    }
-
     .HandCards .card h2 {
         font-size: 5rem;
         margin-right: -1rem;

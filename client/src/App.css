@@ -152,7 +152,10 @@ section {
   width: fit-content;
 }
 
-
+.container{
+  max-width: 1600px !important;
+  /* background: red !important; */
+}
 
 /* homepage stayling */
 
@@ -1264,6 +1267,69 @@ input:checked:hover~.rating-counter:before {
 }
 
 
+/* category page */
+
+.innerContianer::-webkit-scrollbar {
+  width: 0px;
+}
+
+.innerContianer {
+  height: 30vh;
+  width: 100%;
+  overflow-x: auto;
+  padding-left: 15rem;
+
+  
+}
+
+.innerContianer>.dropdown>.dropdown-toggle {
+  background: var(--decorate-color);
+  color: black;
+  font-family: "sfregular";
+  font-size: var(--p1-Paragraph);
+  min-height: 30px;
+  padding: .7rem 1rem;
+  width: fit-content;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+}
+
+.innerContianer>.dropdown>.dropdown-toggle>h6 {
+  color: black !important;
+  margin-bottom: 0;
+}
+
+.Categorybtns {
+  white-space: nowrap;
+  font-size: var(--p1-Paragraph);
+  font-family: "sfregular";
+  color: white;
+  min-height: 30px;
+  padding: .5rem 1rem;
+  width: fit-content;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+  background: none;
+}
+
+.Active {
+  background: var(--decorate-color) !important;
+  color: black !important;
+}
+
+/* 
+.buttonsContainer .dropdown{
+  position: relative;
+} */
+
+.innerContianer .dropdown .dropdown-menu {
+  position: absolute !important;
+  transform: translate(-30px, 50px) !important;
+}
+
+
+
+
 
 
 
@@ -1332,15 +1398,15 @@ input:checked:hover~.rating-counter:before {
     flex-direction: column;
     padding: 1rem;
   }
-  .
 
-  .Curated_list_Container .center_div {
+  . .Curated_list_Container .center_div {
     width: 100%;
   }
 
   .Curated_list_Container .center_div .Sleft {
     width: 100%;
   }
+
   .Curated_list_Container .center_div .Sleft .aboutMovies {
     padding: 1rem;
   }
@@ -1358,7 +1424,7 @@ input:checked:hover~.rating-counter:before {
 }
 
 /* tablets screen  */
-@media screen and (min-width:768px) {}
+/* @media screen and (min-width:768px) {} */
 
 /* mobiles screen  */
 

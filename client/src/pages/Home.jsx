@@ -31,7 +31,7 @@ const Home = () => {
     },
     {
       id: 2,
-      Titlelogo: "client/src/assets/images/thebatman.svg",
+      Titlelogo: "client/src/assets/images/thebatman.png",
       Genre: [
         "Action, ",
         "Crime"
