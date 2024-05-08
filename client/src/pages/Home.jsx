@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect, useRef } from 'react'
 import "../App.css"
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
@@ -9,10 +9,15 @@ import MovieSlider from '../components/Top-Movies-Suggestions/MovieSlider.jsx';
 import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
 import { IoIosArrowForward } from 'react-icons/io';
 import { FaPlay } from 'react-icons/fa';
-import Card from '../components/card/Card.jsx';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import Card from '../components/card/Card.jsx';
+import { motion } from 'framer-motion';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+
+
+
 const Home = () => {
 
   const Lcard = [
@@ -109,6 +114,56 @@ const Home = () => {
     }
 
   ];
+  // useEffect(() => {
+  //   // gsap.registerPlugin(ScrollTrigger);
+  //   // gsap.to(".SectionLable", {
+  //   //   scrollTrigger: {
+  //   //     trigger: ".carftSection .SectionLable",
+  //   //     start: "top 80%", // Adjust as needed
+  //   //     end: "bottom 20%", // Adjust as needed
+  //   //   },
+  //   //   y: "0rem",
+  //   //   opacity: 1,
+  //   //   duration: 1,
+  //   // });
+    
+
+  //   // gsap.to(".pcontainer", {
+  //   //   scrollTrigger: {
+  //   //     trigger: ".pcontainer",
+  //   //     start: "top 80%", // Adjust as needed
+  //   //     end: "bottom 20%", // Adjust as needed
+  //   //     markers:true,
+  //   //   },
+  //   //   y: "0rem",
+  //   //   opacfromity: 1,
+  //   //   duration: 1,
+  //   // });
+    
+  //   // gsap.to(".pcontainer h2", {
+  //   //   scrollTrigger: {
+  //   //     trigger: ".pcontainer  ",
+  //   //     start: "top 80%", // Adjust as needed
+  //   //     end: "bottom 20%", // Adjust as needed
+  //   //     markers:true,
+  //   //   },
+  //   //   y: "0rem",
+  //   //   opacity: 1,
+  //   //   duration: 1,
+  //   // });
+  //   // gsap.to(".pcontainer .mainbtnSec", {
+  //   //   scrollTrigger: {
+  //   //     trigger: ".pcontainer ",
+  //   //     start: "top 80%", // Adjust as needed
+  //   //     end: "bottom 20%", // Adjust as needed
+  //   //     markers:true,
+  //   //   },
+  //   //   y: "0rem",
+  //   //   opacity: 1,
+  //   //   duration: 1,
+  //   // });
+  // }, []);
+
 
 
   return (
@@ -117,31 +172,47 @@ const Home = () => {
         <Carousel className='w-100' >
           {Lcard.map((elem, index) => <Carousel.Item key={index}>
             <Link rel="stylesheet" to="/SingleMoviePage">
-              <img style={{ height: "100vh", width: "100%", objectFit: "cover", }} src={elem.poster_path} alt="" />
+              <div className='movieposter' style={{
+                background: `linear-gradient(to top, black, transparent), url(${elem.poster_path})`
+              }}
+                // initial={{ opacity: 0, scale: 0 }}
+                // animate={{ opacity: 1, scale: 1 }}
+                // transition={{ duration: 0.5 }}
+              >
+              </div>
             </Link>
             <Carousel.Caption className='Caption d-flex flex-column justify-content-center align-items-start'>
               <Link rel="stylesheet" to="/SingleMoviePage">
-                <img height={"100%"} width={"100%"} src={elem.Titlelogo} alt="" className='mb-3 movieLogo'></img>
+                <img height={"100%"} width={"100%"} src={elem.Titlelogo} alt="" className='mb-3 movieLogo'
+                  // initial={{ y: "-5rem" }}
+                  // animate={{ y: "0rem" }}
+                  // transition={{ duration: 0.5 }}
+                ></img>
               </Link>
-
-              <div className='w-100 aboutMovie d-flex justify-content-start align-items-center mb-2'>
-                <p className='mb-0'>{elem.Genre}</p>
-                <p className='mb-0'>{elem.Release_Date}</p>
-                <span className='h-100 w-100 d-flex align-items-center justify-content-start gap-2 position-relative'>
-                  <img height={"15%"} width={"15%"} src="client/src/assets/images/Icon (5).svg" alt="" />
-                  <p className='d-flex align-items-start justify-content-center m-0'>{elem.popularity}</p>
-                </span>
-              </div>
-              <p className='movieDescription'>{elem.Accolades}</p>
-              <div className='movieBtns w-100 gap-3 d-flex'>
-                <Button>
-                  <FaPlay style={{ color: "black", }} />
-                  <Link to="/WatchlistPage">stream now</Link>
-                </Button>
-                <ButtonSec>
-                  <img height={"20px"} width={"20px"} src="client/src/assets/images/plus-large.svg" alt="" />
-                  <Link to="/WatchlistPage">add to watchlist</Link>
-                </ButtonSec>
+              <div 
+              // initial={{ y: "5rem" }}
+              //   animate={{ y: "0rem" }}
+              //   transition={{ duration: 0.5 }}
+                 >
+                <div className='w-100 aboutMovie d-flex justify-content-start align-items-center mb-2'>
+                  <p className='mb-0'>{elem.Genre}</p>
+                  <p className='mb-0'>{elem.Release_Date}</p>
+                  <span className='h-100 w-100 d-flex align-items-center justify-content-start gap-2 position-relative'>
+                    <img height={"15%"} width={"15%"} src="client/src/assets/images/Icon (5).svg" alt="" />
+                    <p className='d-flex align-items-start justify-content-center m-0'>{elem.popularity}</p>
+                  </span>
+                </div>
+                <p className='movieDescription'>{elem.Accolades}</p>
+                <div className='movieBtns w-100 gap-3 d-flex'>
+                  <Button>
+                    <FaPlay style={{ color: "black", }} />
+                    <Link to="/CategoryPage">stream now</Link>
+                  </Button>
+                  <ButtonSec>
+                    <img height={"20px"} width={"20px"} src="client/src/assets/images/plus-large.svg" alt="" />
+                    <Link to="/CategoryPage">add to watchlist</Link>
+                  </ButtonSec>
+                </div>
               </div>
             </Carousel.Caption>
           </Carousel.Item>)}
@@ -149,12 +220,16 @@ const Home = () => {
       </section>
       <section className='carftSection'>
         <div className="container">
-          <h4 className='SectionLable mb-4 align-align-items-center '>
+          <h3 className='SectionLable mb-4 align-align-items-center'
+          >
             Craft Your Watchlist
             <IoIosArrowForward />
-          </h4>
-          <div className='pcontainer d-flex align-items-center'>
-            <h2>Create a Watchlist that value your <br /> taste and time.!</h2>
+          </h3>
+          <div className='pcontainer d-flex align-items-center'
+
+          >
+            <h2
+            >Create a Watchlist that value your taste and time.!</h2>
             <ButtonSec>Let’s see what you’ve got</ButtonSec>
           </div>
         </div>
@@ -162,21 +237,6 @@ const Home = () => {
       <HandSlider />
       <MovieSlider type={"movie"} title={"Top Movies Suggestions "} />
       <MovieSlider type={"tv"} title={"Top Tv Series Suggestions"} />
-      {/* <section className='container position-relative '>
-        <div className="slides w-100 overflow-x-scroll text-nowrap">
-          <OwlCarousel className=" w-100  d-flex gap-2 cursor-pointer">
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-            <Card index={1} Poster={"client/src/assets/images/openhaimer.jpg"} Title={"thala"} catagory={"thala for a reson"} watch={"7"} />
-          </OwlCarousel>
-        </div>
-      </section> */}
       <CuratedSlider title={"Curated Lists Just For You "} />
     </Fragment >
   )

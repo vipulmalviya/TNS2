@@ -5,12 +5,14 @@
     width: 100vw;
     color: var(--text-color);
     overflow: hidden;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
 }
 
 .footerT {
     /* position: absolute; */
     background-color: #1E1E1E;
-    padding: 2rem 8rem;
+    padding: 2rem 7rem;
     justify-content: space-betwee;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.055);
@@ -36,13 +38,15 @@
 
 
 .footerM-l {
-    padding: 5rem;
-    width: 50%;
+    padding: 3.5rem 5rem;
+    width: 60%;
     border-right: 1px solid rgba(255, 255, 255, 0.055);
 }
 
 .footerM-l>h2 {
-    font-size: var(--h2-Heading);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    font-size: var(--h1-Heading);
 }
 
 .footerM-l span {
@@ -53,7 +57,9 @@
 }
 
 .footerM-l p {
-    margin: 2rem 0;
+    margin: 2.5rem 0;
+    font-size: var(--p2-Paragraph);
+    font-weight: 400;
 }
 
 .footerbtns {
@@ -71,13 +77,18 @@
 
 
 .footerM-r {
-    padding: 5rem;
-    width: 50%;
+    padding: 3.5rem 2rem;
+    width: 40%;
     justify-content: center;
 }
 
 .footerM-r>div {
-    width: 50%;
+    width: 70%;
+    /* background: red; */
+}
+.footerM-r h3 {
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
     /* background: red; */
 }
 
@@ -86,7 +97,11 @@
 }
 
 .footerM-r .links p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+
     margin-bottom: 1rem;
+    font-size: var(--p1-Paragraph) !important;
+    font-weight: 400;
 }
 
 .footeM-r-box {
@@ -100,8 +115,8 @@
     border: 1px solid #c2bebe5a;
     color: white !important;
     outline: none;
-    padding: 1rem;
-    width: 350px;
+    padding: 1.5rem;
+    min-width: 100% !important;
     border-radius: 25px;
     background: transparent;
 }
@@ -126,7 +141,7 @@
 
 .footerB button {
     position: absolute;
-    right: 35px;
+    right: 6rem;
     top: 50%;
     transform: translate(0%, -50%);
     background-color: transparent;
@@ -187,5 +202,14 @@
         position: absolute;
         right: 5%;
         top: 50%;
+    }
+    .Flogo img{
+        width: 40%;
+    }
+    .footerM-r {
+        padding: 1rem 0;
+    }
+    .footerM-l {
+        padding: 0;
     }
 }

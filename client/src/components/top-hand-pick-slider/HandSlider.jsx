@@ -31,8 +31,6 @@ const HandSlider = ({ title, type }) => {
 
     // const { data, loading } = useFetch("/movie/upcoming")
 
-
-
     const Lcard = [
         {
             id: 1,
@@ -78,22 +76,21 @@ const HandSlider = ({ title, type }) => {
 
     const responsive = {
         superlargedesktop: {
-            breakpoint: { max: 4000, min: 1024 },
-            items: 4,
-        },
-        desktop: {
-            breakpoint: { max: 1024, min: 800 },
-            items: 3.5,
-        },
-        tablet: {
-            breakpoint: { max: 800, min: 464 },
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5,
+          },
+          desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 5,
+          },
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
             items: 2.5,
-        },
-        mobile: {
-            // margin:"200px",
+          },
+          mobile: {
             breakpoint: { max: 464, min: 0 },
-            items: 1,
-        }
+            items: 1.7,
+          }
     };
 
     return (
@@ -102,6 +99,7 @@ const HandSlider = ({ title, type }) => {
                 <h3 className='SectionLable '>Top Hand-Pick Suggestions <IoIosArrowForward /> </h3>
                 <Carousel className="HandCards d-flex"
                     responsive={responsive}
+                    removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
                     {Lcard.map((elem, index) => <div className="card d-flex align-align-items-center justify-content-center" key={index}>
                         <h1 className='d-flex align-align-items-center justify-content-center'>{index + 1}</h1>

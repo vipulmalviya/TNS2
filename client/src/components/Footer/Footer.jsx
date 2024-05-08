@@ -6,9 +6,9 @@ const Footer = () => {
 
     return (
         <footer className='footer'>
-            <div className="footerT d-flex">
+            <div className="footerT d-flex align-items-center">
                 <div className='Flogo'>
-                    <img src="client/src/assets/images/Logo.svg" alt="" />
+                    <img src="client/src/assets/images/originallogo.svg" alt="" />
                 </div>
                 <div className='social d-flex'>
                     <img src="client/src/assets/images/facebook.svg" alt="" />
@@ -39,19 +39,20 @@ const Footer = () => {
                                 <p>Contact</p>
                             </div>
                             <div className='links'>
-                                <p>About Thenextstream</p>
-                                <p>What is TNS Score?</p>
-                                <p>Buy an Advance for us</p>
-                                <p>Contact</p>
+                                <p>FAQ's</p>
+                                <p>Term & Conditions</p>
+                                <p>Privacy Policy</p>
+                                <p>Help</p>
                             </div>
                         </div>
                         <div className="search">
-                            <input type="email" className="input-with-icon" placeholder='Bandiya would love to see your emails' />
+                            <input type="email" className="input-with-icon" placeholder='Bandiya would love....' />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className='footerB d-flex'>
+            <div className='footerB d-flex align-content-center justify-content-center'>
+                {/* <div></div> */}
                 <p>© 2024 Silvertounge. All Rights Reserved.</p>
                 <button><img src="client/src/assets/images/topbtn.svg" alt="" /></button>
             </div>

@@ -1,17 +1,5 @@
-@font-face {
-  font-family: 'sfregular';
-  src: url("client/src/assets/fonts/SFPRODISPLAYREGULAR.woff") format('woff')
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
-@font-face {
-  font-family: 'sfmedium';
-  src: url("client/src/assets/fonts/SFPRODISPLAYMEDIUM.woff") format('woff')
-}
-
-@font-face {
-  font-family: 'sfbold';
-  src: url("client/src/assets/fonts/SFPRODISPLAYBOLD.woff") format('woff')
-}
 
 * {
   margin: 0;
@@ -21,6 +9,7 @@
 
 html,
 body {
+  font-family: "Plus Jakarta Sans", sans-serif;
   background: var(--dark-background-color);
   height: 100%;
   width: 100%;
@@ -34,17 +23,17 @@ body::-webkit-scrollbar {
 
 :root {
   /* Heading Sizes */
-  --h1-Heading: 4rem;
-  --h2-Heading: 3rem;
-  --h3-Heading: 2rem;
-  --h4-Heading: 1.5rem;
-  --h5-Heading: 1.5rem;
-  --h6-Heading: 1.25rem;
+  --h1-Heading: calc(4rem - 1px);
+  --h2-Heading: calc(3rem - 1px);
+  --h3-Heading: calc(2rem - 1px);
+  --h4-Heading: calc(1.5rem - 1px);
+  --h5-Heading: calc(1.5rem - 1px);
+  --h6-Heading: calc(1.25rem - 1px);
 
   /* Text Sizes */
-  --p1-Paragraph: 1.25rem;
-  --p2-Paragraph: 1rem;
-  --p3-Paragraph: 0.875rem;
+  --p1-Paragraph: calc(1.25rem - 1px);
+  --p2-Paragraph: calc(1rem - 1px);
+  --p3-Paragraph: calc(0.875rem - 1px);
 
   /* color shades */
   --text-color: #FFFFFF;
@@ -52,21 +41,14 @@ body::-webkit-scrollbar {
   --dark-background-color: #111111;
   --decorate-color: #BACC4A;
   --light-decorate-color: #E6F1B9;
-  --light-gray-color: #A9AAB3;
+  --light-gray-color: #D9D9D9;
 
   /* spacing Between sections */
-  --s-tb: 9.375rem;
+  --s-tb: 5.375rem;
 
   /* spacing Between sections and heading */
   --h-tb: 6.25rem;
 }
-
-
-/* For desktops */
-@media only screen and (max-width: 1025px) {}
-
-/* For tablets */
-@media only screen and (max-width: 1024px) {}
 
 /* For mobile devices */
 @media only screen and (max-width: 768px) {
@@ -75,7 +57,7 @@ body::-webkit-scrollbar {
     --h2-Heading: 1.875rem;
     --h3-Heading: 1.5rem;
     --h4-Heading: 1.25rem;
-    --h5-Heading: 1rem;
+    --h5-Heading: 1.22rem;
     --h6-Heading: 0.875rem;
 
 
@@ -91,7 +73,7 @@ body::-webkit-scrollbar {
 
 @media only screen and (max-width: 576px) {
   :root {
-    --s-tb: 4.375rem;
+    --s-tb: 3.375rem;
     --h-tb: 1.875rem;
   }
 }
@@ -128,40 +110,25 @@ p {
 }
 
 a {
+  font-family: "Plus Jakarta Sans", sans-serif;
   text-decoration: none;
   color: var(--dark-background-color);
 }
 
+
 section {
   border-bottom: 1px solid rgba(128, 128, 128, 0.288);
   padding: var(--s-tb) 0 !important;
+  /* background: green; */
 }
 
-/* sliders globle css */
-.owl-prev>span {
-  position: absolute;
-  content: url("client/src/assets/images/leftarrow.svg") !important;
-}
 
-.owl-next>span {
-  position: absolute;
-  content: url("client/src/assets/images/rightarrow 15.svg") !important;
-}
-
-.owl-carousel .owl-item img {
-  width: fit-content;
-}
-
-.container{
-  max-width: 1600px !important;
-  /* background: red !important; */
+.container {
+  max-width: 1700px !important;
+  background: transparent;
 }
 
 /* homepage stayling */
-
-/* .homeCarousel {
-  margin-bottom: var(--s-tb);
-} */
 
 .slides::-webkit-scrollbar {
   display: none;
@@ -174,6 +141,7 @@ section {
 .carousel .carousel-inner {
   display: flex;
   gap: 2rem;
+  height: calc(100vh - 80px) !important;
 }
 
 .homeCarousel {
@@ -188,11 +156,20 @@ section {
   max-width: 500px;
   height: fit-content;
   padding: 1rem;
-  overflow: hidden;
+  /* overflow: hidden; */
+  z-index: 3;
+}
+
+.movieposter {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  height: 100%;
+  width: 100vw;
 }
 
 .aboutMovie p {
-  font-size: var(--h6-Heading);
+  font-size: var(--p2-Paragraph);
   color: var(--light-gray-color);
   margin-right: 4rem;
   font-weight: 600 !important;
@@ -201,19 +178,21 @@ section {
   text-transform: capitalize;
 }
 
-.movieDescription {
-  /* font-weight: 500 !important; */
-  overflow: hidden;
-  font-family: sfmedium;
-  font-weight: 100;
-  width: 100%;
-  /* text-overflow: ellipsis;
-  white-space: nowrap;
-  cursor: pointer; */
-  text-align: start;
-  font-size: var(--h6-Heading);
+.aboutMovie span>h6 {
+  font-weight: 700;
+  font-size: var(--p2-Paragraph);
+  /* color: var(--light-gray-color); */
 }
 
+.movieDescription {
+  font-weight: 400;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow: hidden;
+  width: 100%;
+  text-align: start;
+  color: var(--light-gray-color);
+  font-size: var(--p2-Paragraph);
+}
 
 .movieDescription:hover {
   transition: .3s;
@@ -249,8 +228,8 @@ section {
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .carousel-indicators .active {
@@ -285,6 +264,11 @@ section {
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.513));
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  width: 5% !important;
+}
+
 /* Craft Your Watchlist */
 
 .pcontainer {
@@ -293,42 +277,49 @@ section {
   background-color: var(--decorate-color);
   padding: 1rem 3rem;
   justify-content: space-between !important;
-  border-radius: 25px;
+  border-radius: 15px;
+  /* transform: translateY(5rem); */
+  /* opacity: 0; */
 }
 
 .pcontainer h2 {
   font-size: var(--h3-Heading);
-  font-family: sfbold;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
-  line-height: 2rem;
-  color: var(--background-color);
-}
-
-.pcontainer h2 {
-  font-size: var(--h3-Heading);
+  line-height: 2.5rem;
+  color: black;
+  /* opacity: 0; */
+  /* transform: translateY(8rem); */
 }
 
 .pcontainer>.mainbtnSec {
   width: fit-content;
   margin: 0;
   border: none;
-  background: var(--dark-background-color);
+  background: black;
+  /* transform: translateY(8rem);  */
+  /* opacity: 0; */
 }
 
 .SectionLable {
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-color);
   font-size: var(--h3-Heading);
   font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
+  /* transform: translateY(8rem); */
 }
 
 .SectionLable svg {
-  display: none;
+  margin-bottom: -.4rem;
 }
 
-
+.carftSection {
+  position: relative;
+}
 
 /* login page css */
 
@@ -365,7 +356,7 @@ section {
 .Rleft .hinglight {
   font-size: var(--h1-Heading);
   margin-bottom: 1rem;
-  font-family: sfbold;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
 }
 
@@ -590,7 +581,8 @@ section {
 }
 
 .header h2 {
-  font-family: "sfbold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
   font-size: var(--h2-Heading) !important;
 }
 
@@ -608,6 +600,17 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.143);
 }
 
+.watchlistCard h3 {
+  font-size: var(--h4-Heading);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+}
+
+.range span {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+}
+
 .cardContainer {
   width: 100%;
   gap: 1rem;
@@ -616,7 +619,8 @@ section {
 
 .cardContainer .card {
   height: 348px;
-  width: 100%;
+  /* width: 100%; */
+  margin: 1rem;
   border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat !important;
@@ -643,7 +647,8 @@ progress {
 }
 
 .cardHeaders h3 {
-  font-family: "sfbold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
   font-size: var(--h3-Heading);
 }
 
@@ -844,7 +849,7 @@ progress {
 
 .tnsScore,
 .UserRiview {
-  font-family: "sfbold";
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
   font-size: var(--h4-Heading);
 }
@@ -900,6 +905,11 @@ progress {
   padding: 0rem 0 2rem 0;
 }
 
+.movierating h3 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+
+}
 
 .rating-stars {
   display: block;
@@ -908,7 +918,7 @@ progress {
 
 .rating-counter {
   font-size: var(--p1-Paragraph);
-  font-family: Arial, Helvetica, serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text-color);
   width: 10px;
   text-align: center;
@@ -1066,6 +1076,8 @@ input:checked:hover~.rating-counter:before {
 .leftT a {
   color: var(--decorate-color) !important;
   text-decoration: underline !important;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
 }
 
 .score {
@@ -1093,8 +1105,8 @@ input:checked:hover~.rating-counter:before {
 
 .right>.mainbtnSec {
   width: fit-content;
-  color: var(--accesnt-color) !important;
-  border-color: var(--accesnt-color);
+  color: var(--decorate-color) !important;
+  border-color: var(--decorate-color);
 }
 
 
@@ -1135,7 +1147,7 @@ input:checked:hover~.rating-counter:before {
 
 .Curated_movie_details h2 {
   /* font-size: var(--h2-Heading) ; */
-  font-family: "sfbold";
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .Curated_movie_details p {
@@ -1148,6 +1160,8 @@ input:checked:hover~.rating-counter:before {
   padding: 3px 6px;
   width: fit-content;
   border-radius: 5px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
 }
 
 .Curated_list_Container {
@@ -1159,7 +1173,8 @@ input:checked:hover~.rating-counter:before {
 
 .Curated_list_Container .number_div {
   font-size: var(--h1-Heading);
-  font-family: "sfbold";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
   align-self: flex-start;
   margin-right: 1rem;
 }
@@ -1189,9 +1204,11 @@ input:checked:hover~.rating-counter:before {
 
 .Curated_list_Container .ratting_div .movieScore .aboutTns>div {
   gap: 2rem;
+  text-align: center !important;
 }
 
 .rating_reviews {
+  text-align: center !important;
   position: relative;
 }
 
@@ -1208,8 +1225,8 @@ input:checked:hover~.rating-counter:before {
 .tnsScore_user {
   font-size: var(--p3-Paragraph);
   color: var(--text-color) !important;
-  font-family: sfregular;
-
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
 }
 
 .buttonDiv {
@@ -1217,28 +1234,19 @@ input:checked:hover~.rating-counter:before {
 }
 
 .ratting_div .aboutTns h4 {
-  font-family: sfbold;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
   color: var(--decorate-color);
 }
 
 .buttonDiv h4 {
   font-size: var(--p1-Paragraph);
-  font-family: sfbold;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
   align-self: flex-start;
   color: var(--decorate-color);
 }
 
-/* .buttonDiv .mainbtn {
-  gap: 1rem;
-  margin-top: 0;
-  color: black;
-}
-
-.buttonDiv .mainbtnSec {
-  gap: 1rem;
-  border-color: var(--decorate-color);
-  color: var(--decorate-color) !important;
-} */
 
 .buttonDiv .mainbtn {
   margin-top: 0;
@@ -1266,74 +1274,145 @@ input:checked:hover~.rating-counter:before {
   gap: 1rem;
 }
 
-
 /* category page */
-
-.innerContianer::-webkit-scrollbar {
-  width: 0px;
+.categoryCardSection {
+  padding: 0 !important;
+  height: 10vh;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.288);
 }
 
 .innerContianer {
-  height: 30vh;
-  width: 100%;
-  overflow-x: auto;
-  padding-left: 15rem;
-
-  
+  width: 90%;
+  height: 10vh;
 }
 
-.innerContianer>.dropdown>.dropdown-toggle {
-  background: var(--decorate-color);
-  color: black;
-  font-family: "sfregular";
-  font-size: var(--p1-Paragraph);
-  min-height: 30px;
-  padding: .7rem 1rem;
-  width: fit-content;
-  border: 1px solid var(--light-gray-color);
-  border-radius: 10px;
-}
-
-.innerContianer>.dropdown>.dropdown-toggle>h6 {
+.categoryCardSection .dropdown .dropdown-toggle h6 {
   color: black !important;
-  margin-bottom: 0;
+  margin: 0 !important;
 }
 
 .Categorybtns {
   white-space: nowrap;
   font-size: var(--p1-Paragraph);
-  font-family: "sfregular";
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: white;
+  min-height: 30px;
+  padding: .3rem 1rem;
+  width: fit-content;
+  border: 1px solid var(--light-gray-color);
+  border-radius: 10px;
+  background: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.Active {
+  background: var(--decorate-color) !important;
+  color: black !important;
+  border: none;
+}
+
+.categoryCardSection .dropdown .dropdown-menu {
+  position: absolute !important;
+  transform: translate(-0px, 50px) !important;
+  background: var(--dark-background-color) !important;
+}
+
+
+.categoryCardSection .dropdown .dropdown-item svg{
+  margin-right: .5rem;
+}
+.categoryCardSection .dropdown .dropdown-item{
+  font-weight: 200;
+  font-size: var(--p1-Paragraph);
+  color:var(--text-color);
+}
+.categoryCardSection .dropdown .dropdown-item:hover{
+  font-weight: 200;
+  font-size: var(--p1-Paragraph);
+  color:var(--text-color);
+  background: var(--background-color);
+}
+
+
+
+.innerContianer .react-multi-carousel-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  width: fit-content !important;
+  margin: 0 .5rem;
+}
+
+
+.categoryCardSection .dropdown>.dropdown-toggle {
+  white-space: nowrap;
   color: white;
   min-height: 30px;
   padding: .5rem 1rem;
   width: fit-content;
   border: 1px solid var(--light-gray-color);
   border-radius: 10px;
-  background: none;
+  border: none;
+  text-transform: capitalize;
 }
 
-.Active {
+
+
+.innerContianer .react-multi-carousel-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
+  align-items: center;
+}
+
+.breadcrumb {
+  display: block;
+}
+
+.breadcrumb h3>span {
+  color: var(--decorate-color);
+}
+
+.breadcrumb p>span {
+  color: var(--decorate-color);
+}
+
+.pagination .page-item .page-link {
+  background: transparent;
+  color: var(--text-color);
+}
+
+.active>.page-link {
   background: var(--decorate-color) !important;
   color: black !important;
 }
 
-/* 
-.buttonsContainer .dropdown{
-  position: relative;
-} */
+.page-item svg {
+  margin-bottom: .2rem;
+}
 
-.innerContianer .dropdown .dropdown-menu {
-  position: absolute !important;
-  transform: translate(-30px, 50px) !important;
+.page-item {
+  border-radius: 20px;
+}
+
+.page-item .page-link {
+  border-radius: 10px !important;
+  border: 1px solid #FFFFFF33 !important;
 }
 
 
-
-
-
-
-
 /* responsive code */
+@media screen and (max-width: 1860px) and (min-width: 1280px) {
+  .container {
+    max-width: 1500px !important;
+  }
+}
 
 /* big screen  */
 @media screen and (min-width:1024px) {
@@ -1399,7 +1478,7 @@ input:checked:hover~.rating-counter:before {
     padding: 1rem;
   }
 
-  . .Curated_list_Container .center_div {
+  .Curated_list_Container .center_div {
     width: 100%;
   }
 
@@ -1421,6 +1500,11 @@ input:checked:hover~.rating-counter:before {
   }
 
 
+  .cardsitems {
+    /* align-items: center;
+    justify-content: center; */
+    display: flex;
+  }
 }
 
 /* tablets screen  */
@@ -1429,6 +1513,10 @@ input:checked:hover~.rating-counter:before {
 /* mobiles screen  */
 
 @media screen and (max-width:428px) {
+
+  .SectionLable svg {
+    display: none;
+  }
 
   .Curated_movie_details {
     left: 0;
@@ -1613,5 +1701,25 @@ input:checked:hover~.rating-counter:before {
     width: 100%;
   }
 
+  .cardsitems .singlecard {
+    max-width: 50% !important;
+    margin: 1.5rem 0;
+    padding: 0 .5rem !important;
+  }
+
+  .pcontainer {
+    padding: 1rem;
+  }
+
+  .pcontainer h2 {
+    font-size: var(--h4-Heading);
+    text-align: start;
+    line-height: normal;
+  }
+
+  .movieposter {
+    background-position: center !important;
+    background-size: cover !important;
+  }
 
 }

@@ -4,27 +4,35 @@ import Button from '../buttons/Button'
 import { Link } from 'react-router-dom'
 import ButtonSec from '../buttons/ButtonSec'
 import { LuPencilLine } from "react-icons/lu";
+import { MdDone } from 'react-icons/md'
 
 
-const Card = ({ index, Poster, Title, catagory, watch ,btn }) => {
+const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) => {
+    const [ChangeBtn, setChangeBtn] = useState(false)
+    function btnchange() {
+        setChangeBtn(!ChangeBtn)
+    }
+
     return (
         <>
-            <div className="singlecard " key={index}>
-                <img height={"400px"} width={"100%"} src={Poster} alt="" />
+            <div onClick={onclick} className="singlecard" key={index}>
+                <img height={"70%"} width={"100%"} src={Poster} alt="" />
                 <div className='movieDetails d-flex justify-content-between flex-column'>
                     <div className=' d-flex justify-content-between'>
-                        <span className='position-relative gap-1 h-75 w-auto d-flex justify-content-start align-items-start flex-column '>
-                            <h4>{Title}</h4>
+                        <span className='position-relative gap-1 h-75  d-flex justify-content-start align-items-start flex-column '>
+                            <h4 data-toggle="tooltip" title={Title} >{Title}</h4>
                             <p>{catagory}</p>
                         </span>
-                        <span className='position-relative gap-1 h-75 w-auto d-flex flex-column justify-content-start align-items-center'>
+                        <span className='position-relative gap-1 h-75  d-flex flex-column justify-content-start align-items-center'>
                             <img height={"30px"} src="client/src/assets/images/TNS 1.svg" alt="" />
                             <span className="number">{watch}</span>
                         </span>
                     </div>{
-                    btn
-                        ?<Button><Link to="/watchlist">+ Add to Watchlist</Link></Button>
-                            :<ButtonSec><Link to="/watchlist"> <LuPencilLine /> Write a Review </Link></ButtonSec>
+                        btn
+                            ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}><Link data-value={value} className='add' to="">
+                                {ChangeBtn ? <>{<MdDone />} Added</> : "+ Add to Watchlist"}
+                            </Link></Button>
+                            : <ButtonSec><Link to=""> <LuPencilLine /> Write a Review </Link></ButtonSec>
                     }
                 </div>
             </div>

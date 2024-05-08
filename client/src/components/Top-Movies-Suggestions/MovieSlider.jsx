@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import "./movieSlider.css";
 // import OwlCarousel from 'react-owl-carousel';
 import Card from '../card/Card.jsx';
@@ -26,6 +26,20 @@ const MovieSlider = ({ title, type }) => {
     // useEffect(() => {
     //     fetchMovieData();
     // },[type]);
+
+
+
+    const [Watchlist, setWatchlist] = useState([])
+    function cartfunc(params) {
+        if (params.target.classList.contains("add")) {
+            // alert("movie added")
+            setWatchlist(Lcard[params.target.dataset.value])
+        }
+        
+    }
+    console.log(Watchlist);
+
+
 
 
     const Lcard = [
@@ -110,7 +124,7 @@ const MovieSlider = ({ title, type }) => {
             id: 5,
             original_title: "The shining",
             Genre: [
-                "Psychological, " ,
+                "Psychological, ",
                 "Horror"
             ],
             Runtime: "2h 16m",
@@ -129,7 +143,7 @@ const MovieSlider = ({ title, type }) => {
             id: 6,
             original_title: "The shining",
             Genre: [
-                "Psychological, " ,
+                "Psychological, ",
                 "Horror"
             ],
             Runtime: "2h 16m",
@@ -169,49 +183,32 @@ const MovieSlider = ({ title, type }) => {
 
     const responsive = {
         superlargedesktop: {
-          breakpoint: { max: 4000, min: 1024 },
-          items: 5,
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5.7,
         },
         desktop: {
-          breakpoint: { max: 1024, min: 800 },
-          items: 4.5,
+            breakpoint: { max: 3000, min: 1024 },
+            items: 6,
         },
         tablet: {
-          breakpoint: { max: 800, min: 464 },
-          items: 2.5,
+            breakpoint: { max: 1024, min: 464 },
+            items: 2.5,
         },
         mobile: {
             // margin:"200px",
-          breakpoint: { max: 464, min: 0 },
-          items: 1,
+            breakpoint: { max: 464, min: 0 },
+            items: 1.5,
         }
-      };
+    };
     return (
         <section>
             <div className="container ">
-                <h3 className='SectionLable '>{title} <IoIosArrowForward /></h3>
+                <h3 className='SectionLable'>{title} <IoIosArrowForward /></h3>
                 {<Carousel className="MovieCards flex"
-                  responsive={responsive}
-                    // margin={10}
-                    // nav={true}
-                    // dots={false}
-                    // autoplay={false}
-                    // // autoplayHoverPause={true}
-                    // responsive={{
-                    //     0: {
-                    //         items: 1,
-                    //         nav: false,
-                    //     },
-                    //     768: {
-                    //         items: 2,
-                    //     },
-                    //     1000: {
-                    //         items: 4,
-                    //     }
-                    // }}
-                    >
-                    {Lcard.map((elem) =>
-                        <Card key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} btn={true} />
+                    responsive={responsive}
+                    removeArrowOnDeviceType={["tablet", "mobile"]}>
+                    {Lcard.map((elem, index) =>
+                        <Card value={index} onclick={cartfunc} key={elem.id} Poster={elem.poster_path} Title={elem.original_title || elem.original_name} catagory={elem.Genre} watch={elem.popularity} btn={true} />
                     )}
                 </Carousel>}
             </div>

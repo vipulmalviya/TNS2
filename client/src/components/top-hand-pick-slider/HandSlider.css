@@ -4,72 +4,53 @@
     justify-content: flex-start !important;
 }
 
-.HandCards .owl-stage-outer {
-    padding-left: 4rem;
-}
-
 .HandCards .card {
     position: relative;
-    min-height: 450px;
-    min-width: 350px;
+    min-height: 150px;
+    min-width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 1rem;
+    /* padding: 1rem; */
     background: transparent;
     border: none;
 }
-.HandCards .card > img {
-    height: 348px !important;
-    width: 245px !important;
+
+.HandCards .card>img {
+    height: 350px !important;
+    width: 70% !important;
+    /* width: 245px !important; */
+}
+
+.HandCards .react-multi-carousel-item {
+    width: fit-content;
 }
 
 .HandCards .card h1 {
-    font-size: 17rem;
+    font-size: 14rem;
     text-transform: capitalize;
     background: linear-gradient(to top, #C2C1C194, #FFFFFF);
     -webkit-background-clip: text;
     letter-spacing: -1.5rem;
     background-clip: text;
     color: transparent !important;
-    font-family: sfbold;
-    width: fit-content;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+    width: calc(100% - 70%);
     height: fit-content;
-    top: 50%;
-    transform: translate(20%, 0%);
+    transform: translate(25%, 0%);
     margin-bottom: 0 !important;
 }
 
 .HandCards .card img {
     height: 100%;
     width: 100%;
-    border-radius: 25px !important;
+    border-radius: 15px !important;
     object-fit: cover;
     z-index: 2;
 }
 
-.owl-prev {
-    background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 5rem;
-    position: absolute;
-    left: -5%;
-    top: 40%;
-    font-weight: 100 !important;
-    transform: translate(0%, -30%);
-    z-index: 10;
-}
-
-.owl-prev span {
-    font-size: 10rem;
-    font-weight: 100 !important;
-    font-family: "system-ui";
-    font-style: normal;
-    color: rgba(255, 255, 255, 0.575) !important;
-    content: url("client/src/assets/images/leftarrow.svg") !important;
-}
 
 @media screen and (max-width: 1280px) {
     .HandCards {
@@ -85,8 +66,8 @@
 @media screen and (max-width: 900px) {
     .HandCards .card {
         position: relative;
-        min-height: 350px !important;
-        max-width: 100%;
+        /* min-height: 350px !important;
+        max-width: 100%; */
         padding: 0rem;
         background: transparent;
     }
@@ -111,10 +92,30 @@
         font-size: 5rem;
         margin-right: -1rem;
     }
+
 }
 
 @media screen and (max-width: 428px) {
     .HandCards {
-        padding: 1rem;
+        padding: 0rem;
+    }
+    
+    .HandCards .card {
+        position: relative;
+        padding: 0.5rem;
+        width: 100%;
+        height: 300px !important;
+    }
+
+    .HandCards .card img {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .HandCards .card h1 {
+        font-size: 8rem;
+        width: calc(100% - 0%);
+        /* transform: translate(40%, -50%); */
+        position: absolute !important;
     }
 }
