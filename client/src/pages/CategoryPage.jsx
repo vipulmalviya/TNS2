@@ -68,6 +68,13 @@ const CategoryPage = () => {
             Poster: "client/src/assets/images/wonka.png",
             title: "Wonka",
 
+        },
+        {
+            category: "Family_Friendly",
+            value: "Family Friendly",
+            Poster: "client/src/assets/images/wonka.png",
+            title: "Wonka",
+
         }
     ]
 
@@ -130,7 +137,7 @@ const CategoryPage = () => {
                         <h3>Showing results for <span>{"Hidden Gems"} / {"Tv Series"}</span></h3>
                         <p className=''>Search only for <span>{"Hidden Gems"}</span></p>
                     </div>
-                    <div className="cardsitems d-flex row flex-wrap ">
+                    <div className="cardsitems">
                         {array.map((elem) => {
                             return <Cards Poster={elem.Poster} btn={true} Title={elem.title} watch={92.9} catagory={"comady, drama"} />
                         })}

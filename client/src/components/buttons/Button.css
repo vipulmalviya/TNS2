@@ -1,17 +1,17 @@
 .mainbtn {
     background-color: #BACC4A;
     color: var(--black-color);
-    /* width: 100%; */
-    /* padding: 10px 28px; */
-    padding: 0.5rem 2rem;
-    border-radius: 8px;
+    padding: 8px 37px;
+    border-radius: 10px;
     cursor: pointer;
     border: none;
     font-size: var(--p2-Paragraph);
     display: inline-block;
     text-transform: capitalize;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 600;
+    white-space: nowrap;
+}
+.mainbtn a ,.mainbtnSec a{
+    font-family: "HelveticaNeueMedium";
 }
 
 /* 
@@ -25,9 +25,8 @@
     display: inline-block;
     background-color: transparent;
     color: white !important;
-    /* width: 100%; */
-    padding: 0.5rem 2rem;
-    border-radius: 8px;
+    padding: 8px 37px;
+    border-radius: 10px;
     cursor: pointer;
     border: 1px solid white;
     align-items: center !important;
@@ -35,12 +34,15 @@
     gap: 0.5rem;
     font-size: var(--p2-Paragraph);
     text-transform: capitalize;
+    white-space: nowrap;
 }
+
 .mainbtnSec img {
-   width: fit-content !important;
+    width: fit-content !important;
 }
+
 .mainbtn img {
-   width: fit-content !important;
+    width: fit-content !important;
 }
 
 

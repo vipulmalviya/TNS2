@@ -31,6 +31,7 @@
 }
 
 .movieDetails h4 {
+    font-family: "HelveticaNeueSemiBold";
     width: 100%;
     text-overflow: ellipsis;
     margin-bottom: 0;
@@ -40,6 +41,7 @@
 
 .movieDetails p {
     font-size: var(--p2-Paragraph);
+    font-family: "HelveticaNeueMedium";
     color: #D9D9D9;
 }
 
@@ -53,10 +55,9 @@
 }
 
 .movieDetails .number {
-    color: var(--text-color);
+    color: var(--light-gray-color);
     font-size: var(--p2-Paragraph);
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 800;
+    font-family: "HelveticaNeueSemiBold", sans-serif;
     height: auto;
 }
 
@@ -67,7 +68,9 @@
     align-self: flex-end;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+}
 
 @media screen and (max-width: 428px) {
     .movieDetails {
@@ -89,10 +92,14 @@
     .singlecard .movieDetails span img {
         width: 60% !important;
         height: 23px;
+        margin-top: 0 !important;
     }
 
     .singlecard .movieDetails .mainbtn {
         font-size: var(--p3-Paragraph);
+    }
+    .logospan{
+        gap: 0rem !important;
     }
 
     .singlecard .movieDetails .number {

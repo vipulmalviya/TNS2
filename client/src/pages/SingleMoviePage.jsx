@@ -39,15 +39,15 @@ const SingleMoviePage = () => {
               </ButtonSec>
             </div>
             <div className="aboutMovies">
-              <div>
+              <div className='aboutMoviesContainer'>
                 <div className="movieTitle">
                   <img src="client/src/assets/images/oppenheimerlogo.svg" alt="" />
                 </div>
-                <div className='movieReales d-flex'>
-                  <div className="movieType">Biography, Drama</div>
-                  <div className="moviePG">PG-13</div>
-                  <div className="movieTime">2h 36m</div>
-                  <div className="movieYear">2023</div>
+                <div className='align-items-center movieReales d-flex'>
+                  <p className="MovieTag movieType">Biography, Drama</p>
+                  <p className="MovieTag moviePG">PG-13</p>
+                  <p className="movieTime">2h 36m</p>
+                  <p className="movieYear">2023</p>
                 </div>
               </div>
               <div>
@@ -80,29 +80,29 @@ const SingleMoviePage = () => {
             </div>
           </div>
           <div className='Sright'>
-            <div className='movieScore d-flex justify-content-center  '>
-              <div className="aboutTns d-flex flex-column justify-content-center align-items-center">
+            <div className='movieScore d-flex justify-content-center align-items-center'>
+              <div className="aboutTns d-flex flex-column justify-content-center align-items-center gap-2">
                 <div className='d-flex align-items-center'>
                   <div className="tnslogo">
-                    <img height={"50px"} width={"70px"} src="client/src/assets/images/Logo.svg" alt="" />
+                    <img height={"50px"} width={"85px"} src="client/src/assets/images/Logo.svg" alt="" />
                   </div>
-                  <div className="tnsScore">92.6</div>
+                  <p className="tnsScore">92.6</p>
                 </div>
                 <h4>TNS Score</h4>
                 <Link>What is TNS Score?</Link>
               </div>
-              <div className="UserRiviews d-flex flex-column justify-content-center align-items-center ">
+              <div className="UserRiviews d-flex flex-column justify-content-center align-items-center gap-2">
                 <div className='d-flex align-items-center'>
                   <div className="UserIcone">
                     <img height={"50px"} width={"50px"} src="client/src/assets/images/users.svg" alt="" />
                   </div>
-                  <div className="UserRiview">9.6</div>
+                  <p className="UserRiview">9.6</p>
                 </div>
                 <h4>User Reviews Rating</h4>
                 <Link>(541 Users)</Link>
               </div>
             </div>
-            <div className='Alluser  '>
+            <div className='Alluser d-flex flex-column gap-2 '>
               <div className="viewAll">
                 <p>View All</p>
               </div>
@@ -140,14 +140,14 @@ const SingleMoviePage = () => {
       </section>
       <section>
         <div className="container movierating d-flex">
-          <div className="left d-flex flex-column justify-content-center align-items-center">
+          <div className="left d-flex flex-column justify-content-center align-items-center gap-4">
             <h3>User Rating & Review </h3>
             <div className='leftT d-flex align-items-center'>
               <div className="score">9.6</div>
               <Link className='d-flex'>based on 541 users reviews</Link>
             </div>
-            <div className='ratingContainer d-flex flex-column '>
-              <div className='d-flex'>
+            <div className='ratingContainer d-flex flex-column gap-2 '>
+              <div className='d-flex justify-content-between'>
                 <h4>Storyline</h4>
                 <div className="rating-stars d-flex">
                   <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
@@ -163,7 +163,7 @@ const SingleMoviePage = () => {
                   <span className="rating-counter" />
                 </div>
               </div>
-              <div className='d-flex'>
+              <div className='d-flex justify-content-between'>
                 <h4>Acting</h4>
                 <div className="rating-stars">
                   <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
@@ -179,7 +179,7 @@ const SingleMoviePage = () => {
                   <span className="rating-counter" />
                 </div>
               </div>
-              <div className='d-flex'>
+              <div className='d-flex justify-content-between'>
                 <h4>Direction</h4>
                 <div className="rating-stars">
                   <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
@@ -195,7 +195,7 @@ const SingleMoviePage = () => {
                   <span className="rating-counter" />
                 </div>
               </div>
-              <div className='d-flex'>
+              <div className='d-flex justify-content-between'>
                 <h4>Production Quality</h4>
                 <div className="rating-stars">
                   <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
@@ -211,7 +211,7 @@ const SingleMoviePage = () => {
                   <span className="rating-counter" />
                 </div>
               </div>
-              <div className='d-flex'>
+              <div className='d-flex justify-content-between'>
                 <h4>Entertainment Value</h4>
                 <div className="rating-stars">
                   <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
@@ -245,7 +245,7 @@ const SingleMoviePage = () => {
                 <input type="radio" name="rating" id="rs9" /><label htmlFor="rs9" />
               </div>
             </div>
-            <p>A non spoiler detail review:
+            <p className='d-flex gap-2'>A non spoiler detail review:
               <br />It's actually the best scientific Biopic made after The theory of everything!! <br /> A Cult classic cinema <br /> Christopher Nolan outshines in his technicality experimentation of direction with subjectives and objectives clearly shown in Black And white that too on an IMAX reel !!</p>
 
             <ButtonSec>See All Reviews (541)</ButtonSec>

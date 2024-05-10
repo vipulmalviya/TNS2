@@ -1,5 +1,11 @@
 import React, { useState } from 'react'
 import "./Footer.css"
+import { GoArrowUpRight } from 'react-icons/go'
+import { FaInstagram } from 'react-icons/fa'
+import { ImFacebook } from 'react-icons/im'
+import { FaXTwitter } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
+import { IoIosArrowDropup } from 'react-icons/io'
 
 const Footer = () => {
 
@@ -7,13 +13,19 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className="footerT d-flex align-items-center">
-                <div className='Flogo'>
+                <Link to="/" className='Flogo'>
                     <img src="client/src/assets/images/originallogo.svg" alt="" />
-                </div>
+                </Link>
                 <div className='social d-flex'>
-                    <img src="client/src/assets/images/facebook.svg" alt="" />
-                    <img src="client/src/assets/images/instagram.svg" alt="" />
-                    <img src="client/src/assets/images/tweeter.svg" alt="" />
+                    <a href="https://www.instagram.com/thenextstream/">
+                        <FaInstagram />
+                    </a>
+                    <a href="#">
+                        <ImFacebook />
+                    </a>
+                    <a href="#">
+                        <FaXTwitter />
+                    </a>
                 </div>
             </div>
             <div className="footerM d-flex">
@@ -24,12 +36,12 @@ const Footer = () => {
                     </h2>
                     <p>It’s free to join and helps finding underrated titles, around like minded there is a sense of cinema.</p>
                     <div className='footerbtns d-flex'>
-                        <button><img src="client/src/assets/images/in.svg" alt="" /></button>
-                        <button><img src="client/src/assets/images/Frame 50.svg" alt="" /></button>
+                        <a href="https://www.instagram.com/thenextstream/"><img src="client/src/assets/images/in.svg" alt="" /></a>
+                        <a href=""><img src="client/src/assets/images/Frame 50.svg" alt="" /></a>
                     </div>
                 </div>
                 <div className='footerM-r d-flex' >
-                    <div>
+                    <div className='d-flex flex-column gap-2'>
                         <h3 className=''>Usefull links</h3>
                         <div className='d-flex footeM-r-box'>
                             <div className='links'>
@@ -54,7 +66,11 @@ const Footer = () => {
             <div className='footerB d-flex align-content-center justify-content-center'>
                 {/* <div></div> */}
                 <p>© 2024 Silvertounge. All Rights Reserved.</p>
-                <button><img src="client/src/assets/images/topbtn.svg" alt="" /></button>
+                <a href='#'><svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="34" height="34" rx="17" stroke="#CDCDCD" />
+                    <path d="M22.25 19.875L17.5 15.125L12.75 19.875" stroke="#CDCDCD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </a>
             </div>
         </footer>
     )

@@ -126,7 +126,7 @@ const Home = () => {
   //   //   opacity: 1,
   //   //   duration: 1,
   //   // });
-    
+
 
   //   // gsap.to(".pcontainer", {
   //   //   scrollTrigger: {
@@ -139,7 +139,7 @@ const Home = () => {
   //   //   opacfromity: 1,
   //   //   duration: 1,
   //   // });
-    
+
   //   // gsap.to(".pcontainer h2", {
   //   //   scrollTrigger: {
   //   //     trigger: ".pcontainer  ",
@@ -163,9 +163,6 @@ const Home = () => {
   //   //   duration: 1,
   //   // });
   // }, []);
-
-
-
   return (
     <Fragment>
       <section className='homeCarousel position-relative'>
@@ -175,25 +172,25 @@ const Home = () => {
               <div className='movieposter' style={{
                 background: `linear-gradient(to top, black, transparent), url(${elem.poster_path})`
               }}
-                // initial={{ opacity: 0, scale: 0 }}
-                // animate={{ opacity: 1, scale: 1 }}
-                // transition={{ duration: 0.5 }}
+              // initial={{ opacity: 0, scale: 0 }}
+              // animate={{ opacity: 1, scale: 1 }}
+              // transition={{ duration: 0.5 }}
               >
               </div>
             </Link>
             <Carousel.Caption className='Caption d-flex flex-column justify-content-center align-items-start'>
               <Link rel="stylesheet" to="/SingleMoviePage">
                 <img height={"100%"} width={"100%"} src={elem.Titlelogo} alt="" className='mb-3 movieLogo'
-                  // initial={{ y: "-5rem" }}
-                  // animate={{ y: "0rem" }}
-                  // transition={{ duration: 0.5 }}
+                // initial={{ y: "-5rem" }}
+                // animate={{ y: "0rem" }}
+                // transition={{ duration: 0.5 }}
                 ></img>
               </Link>
-              <div 
+              <div
               // initial={{ y: "5rem" }}
               //   animate={{ y: "0rem" }}
               //   transition={{ duration: 0.5 }}
-                 >
+              >
                 <div className='w-100 aboutMovie d-flex justify-content-start align-items-center mb-2'>
                   <p className='mb-0'>{elem.Genre}</p>
                   <p className='mb-0'>{elem.Release_Date}</p>
@@ -204,13 +201,13 @@ const Home = () => {
                 </div>
                 <p className='movieDescription'>{elem.Accolades}</p>
                 <div className='movieBtns w-100 gap-3 d-flex'>
-                  <Button>
+                  <Button linkprop={"/SingleMoviePage"}>
                     <FaPlay style={{ color: "black", }} />
-                    <Link to="/CategoryPage">stream now</Link>
+                    <p className='mb-0'> stream now</p>
                   </Button>
                   <ButtonSec>
                     <img height={"20px"} width={"20px"} src="client/src/assets/images/plus-large.svg" alt="" />
-                    <Link to="/CategoryPage">add to watchlist</Link>
+                    <p className='mb-0'>add to watchlist</p>
                   </ButtonSec>
                 </div>
               </div>
@@ -225,12 +222,9 @@ const Home = () => {
             Craft Your Watchlist
             <IoIosArrowForward />
           </h3>
-          <div className='pcontainer d-flex align-items-center'
-
-          >
-            <h2
-            >Create a Watchlist that value your taste and time.!</h2>
-            <ButtonSec>Let’s see what you’ve got</ButtonSec>
+          <div className='pcontainer d-flex align-items-center' >
+            <h2>Create a Watchlist that value your taste and time.!</h2>
+            <ButtonSec linkprop={"/watchlistPage"}>Let’s see what you’ve got</ButtonSec>
           </div>
         </div>
       </section>

@@ -1,5 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap'); */
 
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('client/src/assets/fonts/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueSemiBold';
+  src: url('client/src/assets/fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: url('client/src/assets/fonts/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('client/src/assets/fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 400;
+}
 
 * {
   margin: 0;
@@ -9,7 +32,7 @@
 
 html,
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "helveticaNeuelight", sans-serif;
   background: var(--dark-background-color);
   height: 100%;
   width: 100%;
@@ -32,7 +55,7 @@ body::-webkit-scrollbar {
 
   /* Text Sizes */
   --p1-Paragraph: calc(1.25rem - 1px);
-  --p2-Paragraph: calc(1rem - 1px);
+  --p2-Paragraph: calc(1.10rem - 1px);
   --p3-Paragraph: calc(0.875rem - 1px);
 
   /* color shades */
@@ -110,7 +133,7 @@ p {
 }
 
 a {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "HelveticaNeueMedium", sans-serif;
   text-decoration: none;
   color: var(--dark-background-color);
 }
@@ -185,11 +208,13 @@ section {
 }
 
 .movieDescription {
-  font-weight: 400;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-weight: 400; */
+  font-family: "HelveticaNeueMedium", sans-serif;
   overflow: hidden;
   width: 100%;
+  margin-bottom: 1rem;
   text-align: start;
+  opacity: .7;
   color: var(--light-gray-color);
   font-size: var(--p2-Paragraph);
 }
@@ -284,8 +309,8 @@ section {
 
 .pcontainer h2 {
   font-size: var(--h3-Heading);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
+  font-family: "HelveticaNeueBold", sans-serif;
+  /* font-weight: 800; */
   line-height: 2.5rem;
   color: black;
   /* opacity: 0; */
@@ -294,18 +319,22 @@ section {
 
 .pcontainer>.mainbtnSec {
   width: fit-content;
-  margin: 0;
+  margin: 0 !important;
   border: none;
   background: black;
-  /* transform: translateY(8rem);  */
-  /* opacity: 0; */
+}
+
+.pcontainer>.mainbtnSec>a {
+  color: var(--text-color);
+  font-size: var(--p2-Paragraph);
+  padding: .5rem;
+  margin-bottom: 0 !important;
 }
 
 .SectionLable {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "HelveticaNeueBold", sans-serif;
   color: var(--text-color);
   font-size: var(--h3-Heading);
-  font-weight: 800;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -313,13 +342,7 @@ section {
   /* transform: translateY(8rem); */
 }
 
-.SectionLable svg {
-  margin-bottom: -.4rem;
-}
 
-.carftSection {
-  position: relative;
-}
 
 /* login page css */
 
@@ -356,8 +379,7 @@ section {
 .Rleft .hinglight {
   font-size: var(--h1-Heading);
   margin-bottom: 1rem;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
+  font-family: "HelveticaNeueBold", sans-serif;
 }
 
 .subhadding {
@@ -570,7 +592,7 @@ section {
 
 
 .headersection {
-  padding-top: 2rem !important;
+  padding-top: 4rem !important;
   color: white;
   border-bottom: .5px solid rgba(128, 128, 128, 0.597);
 }
@@ -578,22 +600,38 @@ section {
 .header {
   justify-content: flex-start !important;
   gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: center;
 }
 
 .header h2 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
-  font-size: var(--h2-Heading) !important;
+  font-family: "HelveticaNeueBold", sans-serif;
+  font-size: var(--h3-Heading) !important;
+  margin-bottom: 0;
+}
+
+.header p {
+  font-family: "HelveticaNeueMedium", sans-serif;
+  font-size: var(--p2-Paragraph) !important;
 }
 
 .watchlistbtn {
   cursor: pointer;
 }
 
+.watchlistbtn svg {
+  font-size: 3rem;
+  color: var(--decorate-color);
+}
+
+.watchlistbtn svg path {
+  stroke-width: 15;
+}
+
 .watchlistCard {
   position: relative;
   /* min-height: 50vh; */
-  width: 50%;
+  max-width: 49%;
   padding: 2rem;
   border-radius: 25px;
   background-color: #282829;
@@ -602,13 +640,12 @@ section {
 
 .watchlistCard h3 {
   font-size: var(--h4-Heading);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
+  font-family: "HelveticaNeueBold", sans-serif;
 }
 
-.range span {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
+.titlecount {
+  font-family: "HelveticaNeueSemiBold", sans-serif;
+  font-size: var(--p3-Paragraph);
 }
 
 .cardContainer {
@@ -620,26 +657,24 @@ section {
 .cardContainer .card {
   height: 348px;
   /* width: 100%; */
-  margin: 1rem;
-  border-radius: 15px;
+  margin: .5rem;
+  border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat !important;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .watchlistCards {
   gap: 2rem;
   width: 100%;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
 }
 
-progress {
+.progress {
   width: 100%;
   height: 7px;
-  background-color: red;
+  margin: 1rem 0 0 0;
 }
-
-
 
 .cardHeaders {
   justify-content: space-between !important;
@@ -647,8 +682,7 @@ progress {
 }
 
 .cardHeaders h3 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
+  font-family: "HelveticaNeueBold", sans-serif;
   font-size: var(--h3-Heading);
 }
 
@@ -666,6 +700,9 @@ progress {
   background-color: transparent;
 }
 
+.moreBtn svg {
+  font-size: 2rem;
+}
 
 
 /* single movie page  */
@@ -678,7 +715,7 @@ progress {
 }
 
 .singleSection {
-  margin-top: -15rem;
+  margin-top: -11rem;
 }
 
 .movieContianer {
@@ -688,8 +725,8 @@ progress {
 
 .Sleft {
   position: relative;
-  padding: 2rem;
-  width: 60%;
+  padding: 1rem;
+  width: 70%;
   justify-content: flex-start;
   gap: 2rem;
 }
@@ -697,19 +734,19 @@ progress {
 .trailerCard {
   position: relative;
   min-height: 400px;
-  width: 32%;
+  max-width: 300px;
   gap: 1rem;
   flex-direction: column;
 }
 
 .trailerCard .imgbox {
   width: 100%;
-  border-radius: 25px;
+  height: 60%;
   object-fit: cover;
 }
 
 .trailerCard .imgbox img {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .trailerCard .mainbtn {
@@ -720,11 +757,16 @@ progress {
 }
 
 .trailerCard .mainbtn p {
-  font-size: var(--p3-Paragraph);
+  font-size: var(--p2-Paragraph);
 }
 
 .trailerCard .mainbtnSec p {
-  font-size: var(--p3-Paragraph);
+  font-size: var(--p2-Paragraph);
+}
+
+.trailerCard .mainbtnSec svg,
+.mainbtn svg {
+  font-size: 1rem;
 }
 
 .trailerCard .mainbtnSec:nth-child(3) {
@@ -736,6 +778,10 @@ progress {
   gap: 1rem;
 }
 
+.trailerCard .mainbtnSec:nth-child(3) a {
+  color: var(--decorate-color);
+}
+
 .trailerCard .mainbtnSec:nth-child(4) {
   justify-content: center;
   border: 1px solid #1ED760 !important;
@@ -745,35 +791,53 @@ progress {
   background-color: #1ed75f0e;
 }
 
-.trailerCard .mainbtnSec:nth-child(4) svg {
+.trailerCard .mainbtnSec:nth-child(4) a {
   font-size: 1.5rem;
+  color: #1ED760 !important;
+
+}
+
+.trailerCard .mainbtnSec:nth-child(4) svg {
+  font-size: 1.2rem;
+  color: #1ED760 !important;
+
 }
 
 
 .aboutMovies {
-  padding: 2rem;
-  /* height: 100%; */
-  width: 60%;
-  align-self: flex-start;
+  padding: 1rem;
+  height: 100%;
+  /* gap: 2rem; */
+  display: flex;
+  flex-direction: column;
+  width: 65%;
 }
 
-.Details,
-.Plot {
-  padding: 1rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.179);
+.aboutMoviesContainer {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.179);
 }
 
 .Details h3,
 .Plot h3 {
   font-size: var(--h4-Heading);
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  font-family: "HelveticaNeueBold", sans-serif;
   color: var(--decorate-color);
 }
 
 .Details {
-  gap: 1rem;
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.179);
+  /* gap: 1rem; */
   align-items: flex-start !important;
   flex-direction: column;
+}
+
+.Plot {
+  /* margin: 2rem 0; */
+  padding: 2rem 0;
 }
 
 .Details div {
@@ -782,39 +846,46 @@ progress {
   gap: 1rem;
 }
 
-.aboutMovies .movieTitle {
-  letter-spacing: .2rem;
+.aboutMovies .movieTitle img {
+  width: 300px;
+  /* margin-bottom: 1rem; */
 }
 
-.movieReales {
-  justify-content: space-between !important;
-  margin: 1rem 0;
+.aboutMoviesContainer .movieReales {
+  padding-top: 1rem;
+  gap: 3rem;
 }
 
-.movieReales .moviePG {
-  border-radius: 10px;
+.aboutMoviesContainer .movieReales p {
+  font-size: var(--p2-Paragraph);
+  font-family: "HelveticaNeue", sans-serif;
+  font-weight: 400;
+  color: var(--light-gray-color);
+}
+
+.movieReales .MovieTag {
+  border-radius: 5px;
   border: 1px solid white;
   padding: .2rem .8rem;
 }
 
 .key {
-  margin-bottom: 0;
   font-size: var(--p2-Paragraph);
+  font-family: "HelveticaNeueMedium", sans-serif;
   color: var(--light-gray-color) !important;
 }
 
 .value {
   margin-bottom: 0;
   font-size: var(--p2-Paragraph);
+  font-family: "HelveticaNeueMedium", sans-serif;
   color: var(--text-color) !important;
 }
 
-
-
 .Sright {
   position: relative;
-  padding: 2rem;
-  width: 40%;
+  padding: 1rem;
+  width: 35%;
   justify-content: flex-start;
   gap: 2rem;
 }
@@ -823,7 +894,7 @@ progress {
   position: relative;
   min-height: 250px;
   background-color: #BBCD4A17;
-  border: 2px solid var(--decorate-color);
+  border: 1px solid var(--decorate-color);
   border-radius: 25px;
   gap: 2rem;
 }
@@ -831,12 +902,12 @@ progress {
 .aboutTns>h4,
 .UserRiviews>h4 {
   font-size: var(--p1-Paragraph);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .aboutTns>a,
 .UserRiviews>a {
-  font-size: var(--p3-Paragraph);
+  font-size: var(--p2-Paragraph);
   color: var(--decorate-color) !important;
   text-decoration: underline !important;
 }
@@ -849,20 +920,19 @@ progress {
 
 .tnsScore,
 .UserRiview {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
-  font-size: var(--h4-Heading);
+  font-family: "HelveticaNeueBold", sans-serif;
+  font-size: var(--h3-Heading);
+  margin-bottom: 0 !important;
 }
 
 .Alluser {
-  max-height: 400px;
+  min-height: 400px;
   overflow: hidden;
   position: relative;
-  min-height: 250px;
   border: 2px solid rgba(255, 255, 255, 0.162);
   border-radius: 25px;
   margin-top: 2rem;
-  padding: 2rem;
+  padding: 2rem 5rem;
 }
 
 .usercard {
@@ -880,13 +950,15 @@ progress {
 }
 
 .userDetails p {
-  font-size: var(--p3-Paragraph) !important;
+  font-size: var(--p2-Paragraph) !important;
   margin-bottom: 0;
   color: var(--decorate-color);
 }
 
 .userDetails h4 {
   font-size: var(--p1-Paragraph) !important;
+  font-family: "HelveticaNeueMedium";
+  margin-bottom: 0;
 }
 
 .viewAll {
@@ -906,9 +978,7 @@ progress {
 }
 
 .movierating h3 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
-
+  font-family: "HelveticaNeueSemiBold", sans-serif;
 }
 
 .rating-stars {
@@ -916,9 +986,18 @@ progress {
   position: relative;
 }
 
+.ratingContainer {
+  width: 65%;
+}
+
+.ratingContainer>div h4 {
+  font-size: var(--p1-Paragraph);
+  font-family: "HelveticaNeueMedium";
+}
+
 .rating-counter {
   font-size: var(--p1-Paragraph);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "HelveticaNeueSemiBold", sans-serif;
   color: var(--text-color);
   width: 10px;
   text-align: center;
@@ -1071,22 +1150,20 @@ input:checked:hover~.rating-counter:before {
 
 .left h3 {
   color: var(--decorate-color);
+  font-size: var(--h4-Heading);
 }
 
 .leftT a {
   color: var(--decorate-color) !important;
   text-decoration: underline !important;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 400;
+  font-family: "HelveticaNeueMedium", sans-serif;
 }
 
 .score {
   font-size: var(--h2-Heading);
-  font-weight: 800 !important;
+  font-family: "HelveticaNeueBold";
   margin: 0rem 1rem 0 0;
 }
-
-
 
 .right {
   width: 50%;
@@ -1100,13 +1177,20 @@ input:checked:hover~.rating-counter:before {
 }
 
 .right>p {
-  font-size: var(--h4-Heading);
+  font-family: "HelveticaNeueLight";
+  font-size: var(--p2-Paragraph);
+  color: var(--light-gray-color);
+  line-height: 2rem;
 }
 
 .right>.mainbtnSec {
   width: fit-content;
   color: var(--decorate-color) !important;
   border-color: var(--decorate-color);
+}
+
+.right>.mainbtnSec a {
+  color: var(--decorate-color) !important;
 }
 
 
@@ -1147,7 +1231,7 @@ input:checked:hover~.rating-counter:before {
 
 .Curated_movie_details h2 {
   /* font-size: var(--h2-Heading) ; */
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "HelveticaNeueBold", sans-serif;
 }
 
 .Curated_movie_details p {
@@ -1160,8 +1244,7 @@ input:checked:hover~.rating-counter:before {
   padding: 3px 6px;
   width: fit-content;
   border-radius: 5px;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
+  font-family: "HelveticaNeueSemiBold", sans-serif;
 }
 
 .Curated_list_Container {
@@ -1171,10 +1254,12 @@ input:checked:hover~.rating-counter:before {
   /* border-bottom: 1px solid rgba(255, 255, 255, 0.233); */
 }
 
+.Curated_list_Container .imgbox {
+  height: auto;
+}
 .Curated_list_Container .number_div {
   font-size: var(--h1-Heading);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 800;
+  font-family: "HelveticaNeueBold", sans-serif;
   align-self: flex-start;
   margin-right: 1rem;
 }
@@ -1225,8 +1310,7 @@ input:checked:hover~.rating-counter:before {
 .tnsScore_user {
   font-size: var(--p3-Paragraph);
   color: var(--text-color) !important;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
+  font-family: "HelveticaNeueSemiBold", sans-serif;
 }
 
 .buttonDiv {
@@ -1234,15 +1318,13 @@ input:checked:hover~.rating-counter:before {
 }
 
 .ratting_div .aboutTns h4 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
+  font-family: "HelveticaNeueSemiBold", sans-serif;
   color: var(--decorate-color);
 }
 
 .buttonDiv h4 {
   font-size: var(--p1-Paragraph);
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 600;
+  font-family: "HelveticaNeueSemiBold", sans-serif;
   align-self: flex-start;
   color: var(--decorate-color);
 }
@@ -1252,6 +1334,12 @@ input:checked:hover~.rating-counter:before {
   margin-top: 0;
   gap: 1rem;
   color: black;
+  justify-content: center;
+}
+.buttonDiv .mainbtnSec a{
+  margin-top: 0;
+  gap: 1rem;
+  color: var(--decorate-color);
   justify-content: center;
 }
 
@@ -1294,10 +1382,10 @@ input:checked:hover~.rating-counter:before {
 .Categorybtns {
   white-space: nowrap;
   font-size: var(--p1-Paragraph);
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "HelveticaNeueMedium", sans-serif;
   color: white;
   min-height: 30px;
-  padding: .3rem 1rem;
+  padding: .5rem 1rem;
   width: fit-content;
   border: 1px solid var(--light-gray-color);
   border-radius: 10px;
@@ -1319,18 +1407,20 @@ input:checked:hover~.rating-counter:before {
 }
 
 
-.categoryCardSection .dropdown .dropdown-item svg{
+.categoryCardSection .dropdown .dropdown-item svg {
   margin-right: .5rem;
 }
-.categoryCardSection .dropdown .dropdown-item{
+
+.categoryCardSection .dropdown .dropdown-item {
   font-weight: 200;
   font-size: var(--p1-Paragraph);
-  color:var(--text-color);
+  color: var(--text-color);
 }
-.categoryCardSection .dropdown .dropdown-item:hover{
+
+.categoryCardSection .dropdown .dropdown-item:hover {
   font-weight: 200;
   font-size: var(--p1-Paragraph);
-  color:var(--text-color);
+  color: var(--text-color);
   background: var(--background-color);
 }
 
@@ -1373,6 +1463,7 @@ input:checked:hover~.rating-counter:before {
 
 .breadcrumb {
   display: block;
+  font-family: "HelveticaNeueMedium";
 }
 
 .breadcrumb h3>span {
@@ -1382,6 +1473,15 @@ input:checked:hover~.rating-counter:before {
 .breadcrumb p>span {
   color: var(--decorate-color);
 }
+
+.cardsitems {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-rows: repeat(4,1fr); */
+}
+
+
+
 
 .pagination .page-item .page-link {
   background: transparent;
@@ -1453,13 +1553,26 @@ input:checked:hover~.rating-counter:before {
 
   .Sleft,
   .Sright {
+    gap: 1rem;
     width: 100%;
+  }
+
+  .Sright>.movieScore {
+    justify-content: space-around !important;
   }
 
   .movierating {
     padding: 2rem;
     flex-direction: column;
     gap: 3rem;
+  }
+
+  .aboutMoviesContainer {
+    padding-bottom: 0rem !important;
+  }
+
+  .aboutMoviesContainer .movieReales {
+    gap: .5rem !important;
   }
 
   .right,
@@ -1499,11 +1612,9 @@ input:checked:hover~.rating-counter:before {
     justify-content: space-between;
   }
 
-
   .cardsitems {
-    /* align-items: center;
-    justify-content: center; */
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -1530,8 +1641,13 @@ input:checked:hover~.rating-counter:before {
 
   .Curated_list_Container,
   .movieReales {
-    gap: 1rem;
+    gap: 1rem !important;
     flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .aboutMoviesContainer {
+    padding-bottom: 1rem;
   }
 
   .Curated_list_Container .center_div,
@@ -1549,6 +1665,7 @@ input:checked:hover~.rating-counter:before {
     flex-direction: column;
     width: 100%;
     padding: 1rem;
+    align-items: center;
   }
 
   .trailerCard,
@@ -1701,12 +1818,6 @@ input:checked:hover~.rating-counter:before {
     width: 100%;
   }
 
-  .cardsitems .singlecard {
-    max-width: 50% !important;
-    margin: 1.5rem 0;
-    padding: 0 .5rem !important;
-  }
-
   .pcontainer {
     padding: 1rem;
   }
@@ -1722,4 +1833,25 @@ input:checked:hover~.rating-counter:before {
     background-size: cover !important;
   }
 
+  .cardsitems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardsitems .singlecard {
+    max-width: 100% !important;
+    margin: 1.5rem 0;
+    padding: 0 .5rem !important;
+  }
+}
+
+@media screen and (max-width:427px) and (min-width:300px) {
+  .cardsitems {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .categoryCardSection {
+    height: 100px;
+  }
 }

@@ -8,11 +8,7 @@
     position: relative;
     min-height: 150px;
     min-width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: row;
-    /* padding: 1rem; */
     background: transparent;
     border: none;
 }
@@ -28,18 +24,17 @@
 }
 
 .HandCards .card h1 {
-    font-size: 14rem;
+    font-size: 13rem;
     text-transform: capitalize;
     background: linear-gradient(to top, #C2C1C194, #FFFFFF);
     -webkit-background-clip: text;
     letter-spacing: -1.5rem;
     background-clip: text;
     color: transparent !important;
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 800;
+    font-family: "HelveticaNeueBold", sans-serif;
     width: calc(100% - 70%);
     height: fit-content;
-    transform: translate(25%, 0%);
+    transform: translate(25%, 10%);
     margin-bottom: 0 !important;
 }
 

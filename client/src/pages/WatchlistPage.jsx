@@ -6,6 +6,9 @@ import CuratedSlider from '../components/Curated-Lists/CuratedSlider.jsx';
 import Card from '../components/card/Card.jsx';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { GoArrowRight } from 'react-icons/go';
+import { IoMdMore } from 'react-icons/io';
+import { IoAddCircleOutline } from 'react-icons/io5';
 const arr = [
   {
     img: "client/src/assets/images/oppenheimer.png",
@@ -25,39 +28,39 @@ const arr = [
 
 const data = [
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
-    catagory: "Biography, Drama",
+    Poster: 'client/src/assets/images/dune.png',
+    Title: 'Dune Part Two',
+    watch: "94.5",
+    catagory: "Sci-Fi, Adventure",
   },
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
-    catagory: "Biography, Drama",
+    Poster: 'client/src/assets/images/KillersOfTheFlowerMoon.png',
+    Title: 'Killers of the Flower Moon',
+    watch: "90.5",
+    catagory: "Crime, Western",
   },
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
-    catagory: "Biography, Drama",
+    Poster: 'client/src/assets/images/saltburn.png',
+    Title: 'Saltburn',
+    watch: "91.5",
+    catagory: "Comedy, Drama",
   },
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
-    catagory: "Biography, Drama",
+    Poster: 'client/src/assets/images/Barbie.png',
+    Title: 'Barbie',
+    watch: "87.5",
+    catagory: "Comedy, Fantasy",
   },
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
-    catagory: "Biography, Drama",
+    Poster: 'client/src/assets/images/ThreeOfUs.png',
+    Title: 'Three of us',
+    watch: "91.3",
+    catagory: "Drama",
   },
   {
-    Poster: 'client/src/assets/images/openhaimer.jpg',
-    Title: 'title',
-    watch: "97.3",
+    Poster: 'client/src/assets/images/Sambhadur.png',
+    Title: 'Sam Bhadur',
+    watch: "89.5",
     catagory: "Biography, Drama",
   }
 ]
@@ -86,11 +89,11 @@ const responsiveone = {
 const responsive = {
   superlargedesktop: {
     breakpoint: { max: 4000, min: 1024 },
-    items: 5,
+    items: 6,
   },
   desktop: {
     breakpoint: { max: 1024, min: 800 },
-    items: 3.5,
+    items: 6,
   },
   tablet: {
     breakpoint: { max: 800, min: 464 },
@@ -113,7 +116,7 @@ const WatchlistPage = () => {
           <div className='header d-flex'>
             <h2>My Watchlist </h2>
             <div className='watchlistbtn d-flex align-items-center justify-content-center gap-3'>
-              <img height={"40px"} width={"40px"} src="client/src/assets/images/addbtn.svg" alt="" />
+              <IoAddCircleOutline />
               <p className='mb-0 d-flex align-items-center justify-content-center'>Create New Watchlist</p>
             </div>
           </div>
@@ -121,37 +124,39 @@ const WatchlistPage = () => {
             <div className="watchlistCard">
               <div className='gap-2 d-flex align-items-center justify-content-between'>
                 <h3>Crime - Thriller Movies</h3>
-                <div className="moreBtn"><img src="client/src/assets/images/Icon (7).svg" alt="" /></div>
+                <div className="moreBtn">
+                  <IoMdMore />
+                </div>
               </div>
               <Carousel className='cardContainer d-flex '
                 responsive={responsiveone}
               >
                 {arr.map((elem, index) =>
-                  <div className='card d-flex' key={index} style={{ backgroundImage: `url(${elem.img})` }}>
+                  <div className='card d-flex' key={index} style={{ background: `url(${elem.img})` }}>
                   </div>
                 )}
               </Carousel>
-              <div className='range'>
-                <span>5 Titles Watched out of 10 till Feb</span>
-                <progress value="70" max="100"></progress>
+              <span className='titlecount'>5 Titles Watched out of 10 till Feb</span>
+              <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
+                <div className="progress-bar" style={{ width: '25%', backgroundColor: "#BACC4A", }} />
               </div>
             </div>
             <div className="watchlistCard">
               <div className='gap-2 d-flex align-items-center justify-content-between'>
                 <h3>Crime - Thriller Movies</h3>
-                <div className="moreBtn"><img src="client/src/assets/images/Icon (7).svg" alt="" /></div>
+                <div className="moreBtn"> <IoMdMore /></div>
               </div>
               <Carousel className='cardContainer d-flex '
                 responsive={responsiveone}
               >
                 {arr.map((elem, index) =>
-                  <div className='card d-flex' key={index} style={{ backgroundImage: `url(${elem.img})` }}>
+                  <div className='card d-flex' key={index} style={{ background: `url(${elem.img})` }}>
                   </div>
                 )}
               </Carousel>
-              <div className='range'>
-                <span>5 Titles Watched out of 10 till Feb</span>
-                <progress value="70" max="100"></progress>
+              <span className='titlecount'>5 Titles Watched out of 10 till Feb</span>
+              <div className="progress" role="progressbar" aria-label="Basic example" aria-valuenow={25} aria-valuemin={0} aria-valuemax={100}>
+                <div className="progress-bar" style={{ width: '25%', backgroundColor: "#BACC4A", }} />
               </div>
             </div>
           </div>
@@ -161,19 +166,7 @@ const WatchlistPage = () => {
         <div className="container">
           <div className='cardHeaders d-flex'>
             <h3>Previously Watched Titles</h3>
-            <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="client/src/assets/images/tir.svg" alt="" /></span></span>
-          </div>
-          <Carousel className="MovieCards d-flex"
-            responsive={responsive}
-          >
-            {data.map((elem, index) => <Card key={index} Poster={elem.Poster} Title={elem.Title || elem.original_name} catagory={elem.catagory} watch={elem.watch} btn={true} />)}
-          </Carousel>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className='cardHeaders d-flex'>
-            <h3>Top Suggestions Matches with your Taste</h3>
+            <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <GoArrowRight /></span>
           </div>
           <Carousel className="MovieCards d-flex"
             responsive={responsive}
@@ -182,8 +175,19 @@ const WatchlistPage = () => {
           </Carousel>
         </div>
       </section>
+      <section>
+        <div className="container">
+          <div className='cardHeaders d-flex'>
+            <h3>Top Suggestions Matches with your Taste </h3>
+          </div>
+          <Carousel className="MovieCards d-flex"
+            responsive={responsive}
+          >
+            {data.map((elem, index) => <Card key={index} Poster={elem.Poster} Title={elem.Title || elem.original_name} catagory={elem.catagory} watch={elem.watch} btn={true} />)}
+          </Carousel>
+        </div>
+      </section>
       <CuratedSlider title={"Curated Lists Just For You"} />
-
     </>
 
   )

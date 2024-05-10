@@ -89,13 +89,13 @@ export const CuratedPage = () => {
                                 </div>
                             </div>
                             <div className="aboutMovies">
-                                <div>
+                                <div className='aboutMoviesContainer'>
                                     <div className="movieTitle">
                                     <img width={"100%"} height={"100%"} src={elem.title} alt={"movie logo"} />
                                     </div>
-                                    <div className='movieReales d-flex '>
-                                        <div className="movieType">{elem.type}</div>
-                                        <div className="moviePG">{elem.pg}</div>
+                                    <div className='movieReales align-items-center d-flex gap-3 '>
+                                        <div className="MovieTag movieType">{elem.type}</div>
+                                        <div className="MovieTag moviePG">{elem.pg}</div>
                                         <div className="movieTime">{elem.time}</div>
                                         <div className="movieYear">{elem.year}</div>
                                     </div>

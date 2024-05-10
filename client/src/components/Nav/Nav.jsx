@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import "./Nav.css"
 import { Link } from 'react-router-dom'
 import { MdArrowForward, MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md'
-import { RiLogoutBoxLine } from 'react-icons/ri'
 import { IoMdClose } from 'react-icons/io'
 import { CiSearch } from 'react-icons/ci'
 const Nav = () => {
@@ -15,7 +14,7 @@ const Nav = () => {
     }
 
     return (
-        <header>
+        <header >
             <nav className='d-flex align-items-center'>
                 <div className="left d-flex">
                     <Link to="/" className="logo"><img height={"100%"} weight={"100%"} src="client/src/assets/images/originallogo.svg" alt="" /></Link>

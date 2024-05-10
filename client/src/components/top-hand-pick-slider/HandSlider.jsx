@@ -7,6 +7,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import useFetch from '../../components/fetch/useFetch.jsx';
 import { IoIosArrowForward } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const HandSlider = ({ title, type }) => {
 
@@ -81,7 +82,7 @@ const HandSlider = ({ title, type }) => {
           },
           desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 5,
+            items: 4.5,
           },
           tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -101,10 +102,10 @@ const HandSlider = ({ title, type }) => {
                     responsive={responsive}
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
-                    {Lcard.map((elem, index) => <div className="card d-flex align-align-items-center justify-content-center" key={index}>
-                        <h1 className='d-flex align-align-items-center justify-content-center'>{index + 1}</h1>
+                    {Lcard.map((elem, index) => <Link to={"/SingleMoviePage"} className="card d-flex align-items-center justify-content-center" key={index}>
+                        <h1 className='d-flex align-items-center justify-content-center'>{index + 1}</h1>
                         <img height={"100%"} width={"100%"} src={elem.poster_path} alt="" />
-                    </div>)}
+                    </Link>)}
                 </Carousel>
             </div>
         </section>
