@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom'
 import ButtonSec from '../buttons/ButtonSec'
 import { LuPencilLine } from "react-icons/lu";
 import { MdDone } from 'react-icons/md'
+import { BiPlus } from 'react-icons/bi'
+import { IoIosPulse } from 'react-icons/io'
+import { IoAdd } from 'react-icons/io5'
 
 
 const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) => {
@@ -29,10 +32,10 @@ const Card = ({ index, Poster, Title, catagory, watch, btn, onclick, value }) =>
                         </span>
                     </div>{
                         btn
-                            ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}><Link data-value={value} className='add' to="">
-                                {ChangeBtn ? <>{<MdDone />} Added</> : "+ Add to Watchlist"}
-                            </Link></Button>
-                            : <ButtonSec><Link to=""> <LuPencilLine /> Write a Review </Link></ButtonSec>
+                            ? <Button value={value} colorProp={ChangeBtn} onClickprop={btnchange}>
+                                {ChangeBtn ? <>{<MdDone />} Added</> : <>{<IoAdd />} Add to Watchlist</>}
+                            </Button>
+                            : <ButtonSec><LuPencilLine /> Write a Review </ButtonSec>
                     }
                 </div>
             </div>

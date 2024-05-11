@@ -1,5 +1,5 @@
 import Home from './pages/Home.jsx'
-import "./App.css"
+import "./style.css"
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
 import Nav from './components/Nav/Nav.jsx';

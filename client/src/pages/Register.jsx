@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react'
 // import Nav from '../../Component/Nav/Nav'
-import Button from '../components/buttons/Button.jsx'
-import ButtonSec from '../components/buttons/ButtonSec.jsx'
+import Button from '../components/buttons/Button.jsx';
+import ButtonSec from '../components/buttons/ButtonSec.jsx';
 import axios from 'axios'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
+import { FcGoogle } from 'react-icons/fc';
 
 
 const Register = ({ click, prop, open }) => {
@@ -27,8 +28,8 @@ const Register = ({ click, prop, open }) => {
 
     return (
         <Fragment>
-            <div className='logingdiv'> 
-                <motion.div
+            <div className='ragisterdiv d-flex'>
+                <div
                     initial={{ left: "100%" }}
                     animate={{ left: "0%" }}
                     transition={{ duration: 0.5 }}
@@ -42,8 +43,8 @@ const Register = ({ click, prop, open }) => {
                     <li><img src='/frontend/public/image/Icon (1).svg' className="icone" /><span>AI-Powered Assistance</span></li>
                     <li><img src='/frontend/public/image/Icon (1).svg' className="icone" /><span>Unlock Unseen Treasures</span></li>
                     <li><img src='/frontend/public/image/Icon (1).svg' className="icone" /><span>Shareable Watch lists to Collaborate</span></li>
-                </motion.div>
-                <motion.div
+                </div>
+                <div
                     initial={{ right: "-50%" }}
                     animate={{ right: open ? "-100%" : "0%" }}
                     transition={{ duration: 0.5 }}
@@ -63,7 +64,6 @@ const Register = ({ click, prop, open }) => {
                             <span className="switch d-flex">
                                 <input id="switch-rounded" type="checkbox" />
                                 <label for="switch-rounded">
-
                                 </label>
                                 <p>Receive great facts about great cinema,  our <br /> technical updates and more.</p>
                             </span>
@@ -72,11 +72,12 @@ const Register = ({ click, prop, open }) => {
                     </form>
                     <br />
                     <ButtonSec className="mb-1">
-                        <img src="client/src/assets/images/google.svg" alt="" />
+                    <FcGoogle />
                         <span>
                             Log in with Google
                         </span>
                     </ButtonSec>
+                    <br />
                     <div className='Rfooter'>
                         <p>
                             By Signing up i agree to Thenextstream’s <span className='hinglight'>Terms of</span> <br /> <span className="hinglight">Service</span> and <span className="hinglight">Privacy Policy.</span>
@@ -84,7 +85,7 @@ const Register = ({ click, prop, open }) => {
                         <br />
                         <Link to="/home" onClick={prop}>Already have an account<span className='hinglight'> Log in</span></Link>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </Fragment >
     )

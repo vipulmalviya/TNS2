@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
-import Button from '../components/buttons/Button.jsx'
-import ButtonSec from '../components/buttons/ButtonSec.jsx'
+import Button from '../components/buttons/Button.jsx';
+import ButtonSec from '../components/buttons/ButtonSec.jsx';
 // import Home from '../HomePage/Home.jsx'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'

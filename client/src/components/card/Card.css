@@ -1,7 +1,6 @@
 .singlecard {
     min-height: 300px;
     max-width: 280px;
-    /* background: red !important; */
     padding: 1rem;
     background: transparent;
     color: var(--text-color);
@@ -18,10 +17,8 @@
     min-height: 150px;
     width: 100%;
     justify-content: space-between !important;
-    /* background-color: red; */
     padding: 1rem 0;
     color: var(--text-color);
-    /* gap: 1rem; */
 }
 
 .movieDetails span:first-child {
@@ -31,7 +28,8 @@
 }
 
 .movieDetails h4 {
-    font-family: "HelveticaNeueSemiBold";
+    font-family: "HalyardBold";
+    letter-spacing: .1rem;
     width: 100%;
     text-overflow: ellipsis;
     margin-bottom: 0;
@@ -41,7 +39,8 @@
 
 .movieDetails p {
     font-size: var(--p2-Paragraph);
-    font-family: "HelveticaNeueMedium";
+    font-family: "inter";
+    font-weight: 400;
     color: #D9D9D9;
 }
 
@@ -57,20 +56,17 @@
 .movieDetails .number {
     color: var(--light-gray-color);
     font-size: var(--p2-Paragraph);
-    font-family: "HelveticaNeueSemiBold", sans-serif;
+    font-family: "HalyardBold", sans-serif;
+    font-weight: 800;
     height: auto;
 }
 
-
 .movieDetails .mainbtn {
-    width: 100%;
+    width: 100% !important;
     display: flex;
     align-self: flex-end;
 }
 
-@media screen and (max-width: 768px) {
-
-}
 
 @media screen and (max-width: 428px) {
     .movieDetails {

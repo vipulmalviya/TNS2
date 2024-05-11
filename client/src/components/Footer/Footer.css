@@ -47,6 +47,8 @@
 
 .footerM-l>h2 {
     font-family: "HelveticaNeueSemiBold", sans-serif;
+    font-weight: 800;
+    letter-spacing: .1rem;
     font-size: var(--h2-Heading);
 }
 
@@ -59,7 +61,7 @@
 
 .footerM-l p {
     margin-top: 2rem;
-    font-family: "HelveticaNeueLight";
+    font-family: "inter" sans-serif;
     font-size: var(--p2-Paragraph);
     font-weight: 400;
 }
@@ -90,7 +92,7 @@
 }
 
 .footerM-r h3 {
-    font-weight: 600;
+    font-weight: 800;
     font-family: "HelveticaNeueSemiBold", sans-serif;
     /* background: red; */
 }
@@ -100,7 +102,8 @@
 }
 
 .footerM-r .links p {
-    font-family: "HelveticaNeueLight", sans-serif;
+    font-family: "inter", sans-serif;
+    font-weight: 400;
     margin-bottom: 1rem;
     font-size: var(--p1-Paragraph) !important;
 }

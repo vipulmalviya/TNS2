@@ -12,29 +12,6 @@
     color: var(--background-color) !important;
 }
 
-/* 
-.owl-carousel.owl-drag .owl-item {
-    display: flex;
-    justify-content: center;
-    gap: 10rem;
-} */
-
-/* .react-multiple-carousel__arrow--right::before {
-    content: url("client/src/assets/images/rightarrow 15.svg") !important;
-    background: transparent !important;
-}
-.react-multiple-carousel__arrow--left::before {
-    content: url("client/src/assets/images/leftarrow.svg") !important;
-    background: transparent !important;
-}
-
-.react-multiple-carousel__arrow {
-    background: transparent;
-}
-.react-multiple-carousel__arrow:hover{
-    background: none;
-} */
-
 .react-multiple-carousel__arrow--right {
     transform: translate(0, -50%);
     right: 0% !important;

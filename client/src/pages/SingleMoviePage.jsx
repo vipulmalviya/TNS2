@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 // import Button from '../../Component/buttons/Button'
 import { Link } from 'react-router-dom'
-import "../App.css"
+// import "../App.css"
 import Button from '../components/buttons/Button.jsx';
 import ButtonSec from '../components/buttons/ButtonSec.jsx';
 import MovieSlider from '../components/Top-Movies-Suggestions/MovieSlider'

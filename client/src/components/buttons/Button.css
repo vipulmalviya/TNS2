@@ -1,54 +1,82 @@
 .mainbtn {
     background-color: #BACC4A;
     color: var(--black-color);
-    padding: 8px 37px;
+    padding: 10px 37px;
+    width: fit-content !important;
     border-radius: 10px;
     cursor: pointer;
     border: none;
-    font-size: var(--p2-Paragraph);
-    display: inline-block;
     text-transform: capitalize;
     white-space: nowrap;
 }
-.mainbtn a ,.mainbtnSec a{
-    font-family: "HelveticaNeueMedium";
+
+.mainbtn p {
+    font-size: var(--p2-Paragraph);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
-/* 
-.mainbtn:hover {
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-} */
+.mainbtn a svg {
+    font-size: 1.2rem;
+}
+
+
+/* mainbtnSec css */
 
 .mainbtnSec {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 600;
-    display: inline-block;
     background-color: transparent;
-    color: white !important;
-    padding: 8px 37px;
+    padding: 10px 37px;
+    width: fit-content !important;
     border-radius: 10px;
     cursor: pointer;
-    border: 1px solid white;
-    align-items: center !important;
-    justify-content: center !important;
+    border: 1px solid var(--decorate-color);
+    color: var(--decorate-color);
     gap: 0.5rem;
-    font-size: var(--p2-Paragraph);
     text-transform: capitalize;
     white-space: nowrap;
 }
 
-.mainbtnSec img {
-    width: fit-content !important;
+.mainbtnSec a svg {
+    font-size: 1.2rem;
+    color: var(--decorate-color);
 }
 
-.mainbtn img {
-    width: fit-content !important;
+.mainbtnSec p {
+    font-size: var(--p2-Paragraph);
+    color: var(--decorate-color);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 
-/* .mainbtnSec:hover {
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-} */
+/* BlackBtn css */
+
+.BlackBtn {
+    background-color: transparent;
+    padding: 10px 37px;
+    width: fit-content !important;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    white-space: nowrap;
+    background: var(--black-color);
+}
+
+.BlackBtn a svg {
+    font-size: 1.2rem;
+}
+
+.BlackBtn p {
+    font-size: var(--p2-Paragraph);
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
+    font-weight: 500
+}
+
 
 
 @media screen and (max-width: 786px) {

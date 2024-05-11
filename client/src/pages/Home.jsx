@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useRef } from 'react'
-import "../App.css"
+// import "../App.css"
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
 import Button from "./../components/buttons/Button.jsx"
@@ -11,6 +11,8 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { FaPlay } from 'react-icons/fa';
 // import Card from '../components/card/Card.jsx';
 import { motion } from 'framer-motion';
+import { IoAdd } from 'react-icons/io5';
+import BlackBtn from '../components/buttons/BalckBtn.jsx';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -70,7 +72,7 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "20219",
       Accolades: "Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak....",
-      poster_path: "client/src/assets/images/jokerhome.png",
+      poster_path: "client/public/images/jokerhome.png",
       popularity: "92.5",
     },
     {
@@ -166,8 +168,8 @@ const Home = () => {
   return (
     <Fragment>
       <section className='homeCarousel position-relative'>
-        <Carousel className='w-100' >
-          {Lcard.map((elem, index) => <Carousel.Item key={index}>
+        <Carousel>
+          {Lcard.map((elem, index) => <Carousel.Item className='carousel-item' key={index}>
             <Link rel="stylesheet" to="/SingleMoviePage">
               <div className='movieposter' style={{
                 background: `linear-gradient(to top, black, transparent), url(${elem.poster_path})`
@@ -195,18 +197,18 @@ const Home = () => {
                   <p className='mb-0'>{elem.Genre}</p>
                   <p className='mb-0'>{elem.Release_Date}</p>
                   <span className='h-100 w-100 d-flex align-items-center justify-content-start gap-2 position-relative'>
-                    <img height={"15%"} width={"15%"} src="client/src/assets/images/Icon (5).svg" alt="" />
+                    <img height={"100%"} width={"100%"} src="client/src/assets/images/Logo.svg" alt="" />
                     <p className='d-flex align-items-start justify-content-center m-0'>{elem.popularity}</p>
                   </span>
                 </div>
                 <p className='movieDescription'>{elem.Accolades}</p>
-                <div className='movieBtns w-100 gap-3 d-flex'>
+                <div className='movieBtns gap-3 d-flex'>
                   <Button linkprop={"/SingleMoviePage"}>
                     <FaPlay style={{ color: "black", }} />
                     <p className='mb-0'> stream now</p>
                   </Button>
                   <ButtonSec>
-                    <img height={"20px"} width={"20px"} src="client/src/assets/images/plus-large.svg" alt="" />
+                  <IoAdd />
                     <p className='mb-0'>add to watchlist</p>
                   </ButtonSec>
                 </div>
@@ -224,7 +226,7 @@ const Home = () => {
           </h3>
           <div className='pcontainer d-flex align-items-center' >
             <h2>Create a Watchlist that value your taste and time.!</h2>
-            <ButtonSec linkprop={"/watchlistPage"}>Let’s see what you’ve got</ButtonSec>
+            <BlackBtn linkprop={"/watchlistPage"}> <p className='mb-0'> Let’s see what you’ve got </p></BlackBtn>
           </div>
         </div>
       </section>

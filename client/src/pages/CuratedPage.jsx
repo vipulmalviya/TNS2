@@ -1,5 +1,5 @@
 import React from 'react'
-import "../App.css"
+// import "../App.css"
 import { Fragment } from 'react'
 import Button from '../components/buttons/Button.jsx';
 import ButtonSec from '../components/buttons/ButtonSec.jsx';

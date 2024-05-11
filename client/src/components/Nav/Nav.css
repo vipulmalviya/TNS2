@@ -6,7 +6,6 @@ header {
     background-color: transparent;
     height: 80px;
     z-index: 10;
-    /* background: red; */
 }
 
 nav {
@@ -21,7 +20,6 @@ nav .left {
     padding: 1rem 0;
     justify-content: flex-start;
     align-items: center;
-    /* height: 100%; */
     width: 30%;
 }
 
@@ -57,7 +55,7 @@ nav .left {
     border: none;
     outline: none;
     padding: 1rem 0rem 1rem 0rem;
-    margin: 0rem 0rem 0rem -7rem;
+    margin: 0rem 0rem 0rem -5rem;
     background: transparent;
 }
 
@@ -133,9 +131,9 @@ nav .rightt {
 }
 
 .dropdown-item {
-    font-family: "HelveticaNeueSemiBold", sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 800;
     font-size: var(--p1-Paragraph);
-    /* color: var(--decorate-color); */
     color: var(--text-color);
     background-color: none;
 }
@@ -150,14 +148,16 @@ nav .rightt {
 .navbar-nav .dropdown-item {
     color: var(--decorate-color);
     background-color: transparent;
-    font-family: "HelveticaNeueBold", sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 800;
     border: none;
     font-size: var(--h5-Heading);
 }
 
 .dropdown>.dropdown-toggle>h2 {
     color: var(--decorate-color);
-    font-family: "HelveticaNeueBold", sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 800;
     font-size: var(--h5-Heading);
 }
 
@@ -174,11 +174,6 @@ nav .rightt {
     cursor: pointer;
 }
 
-/* .dropdown-item:focus, .dropdown-item:hover {
-    color: var(--bs-dropdown-link-hover-color);
-    background-color: var();
-} */
-
 .logoutdiv svg {
     font-size: 20px;
     color: var(--decorate-color);
@@ -186,7 +181,8 @@ nav .rightt {
 
 .logoutdiv h6 {
     color: var(--text-color);
-    font-family: "HelveticaNeueSemiBold", sans-serif;
+    letter-spacing: .1rem;
+    font-weight: 800;
     font-size: var(--h6-Heading);
 }
 
