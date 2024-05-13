@@ -16,14 +16,14 @@ const SingleMoviePage = () => {
   return (
     <Fragment>
       <div className='Movieposter'
-        style={{ background: `linear-gradient(to top, black, transparent), url(${"client/src/assets/images/openhaimer.jpg"})` }}
+        style={{ background: `linear-gradient(to top, black, transparent), url(${"./src/assets/images/openhaimer.jpg"})` }}
       ></div>
       <section className='singleSection'>
         <div className="container movieContianer d-flex">
           <div className='Sleft d-flex'>
             <div className="trailerCard d-flex">
               <div className="imgbox">
-                <img width={"100%"} height={"100%"} src="client/src/assets/images/opSubImage.png" alt="" />
+                <img width={"100%"} height={"100%"} src="./src/assets/images/opSubImage.png" alt="" />
               </div>
               <Button>
                 <FaPlay />
@@ -41,7 +41,7 @@ const SingleMoviePage = () => {
             <div className="aboutMovies">
               <div className='aboutMoviesContainer'>
                 <div className="movieTitle">
-                  <img src="client/src/assets/images/oppenheimerlogo.svg" alt="" />
+                  <img src="./src/assets/images/oppenheimerlogo.svg" alt="" />
                 </div>
                 <div className='align-items-center movieReales d-flex'>
                   <p className="MovieTag movieType">Biography, Drama</p>
@@ -84,7 +84,7 @@ const SingleMoviePage = () => {
               <div className="aboutTns d-flex flex-column justify-content-center align-items-center gap-2">
                 <div className='d-flex align-items-center'>
                   <div className="tnslogo">
-                    <img height={"50px"} width={"85px"} src="client/src/assets/images/Logo.svg" alt="" />
+                    <img height={"50px"} width={"85px"} src="./src/assets/images/Logo.svg" alt="" />
                   </div>
                   <p className="tnsScore">92.6</p>
                 </div>
@@ -94,7 +94,7 @@ const SingleMoviePage = () => {
               <div className="UserRiviews d-flex flex-column justify-content-center align-items-center gap-2">
                 <div className='d-flex align-items-center'>
                   <div className="UserIcone">
-                    <img height={"50px"} width={"50px"} src="client/src/assets/images/users.svg" alt="" />
+                    <img height={"50px"} width={"50px"} src="./src/assets/images/users.svg" alt="" />
                   </div>
                   <p className="UserRiview">9.6</p>
                 </div>
@@ -107,28 +107,28 @@ const SingleMoviePage = () => {
                 <p>View All</p>
               </div>
               <div className="usercard d-flex">
-                <img height={"50px"} width={"50px"} src="client/src/assets/images/userimg.png" alt="" />
+                <img height={"50px"} width={"50px"} src="./src/assets/images/userimg.png" alt="" />
                 <div className="userDetails d-flex flex-column justify-content-center align-items-center">
                   <h4>Cillian Murphy</h4>
                   <p>J. Robert Oppenheimer</p>
                 </div>
               </div>
               <div className="usercard d-flex">
-                <img height={"50px"} width={"50px"} src="client/src/assets/images/userimg.png" alt="" />
+                <img height={"50px"} width={"50px"} src="./src/assets/images/userimg.png" alt="" />
                 <div className="userDetails d-flex flex-column justify-content-center align-items-center">
                   <h4>Cillian Murphy</h4>
                   <p>J. Robert Oppenheimer</p>
                 </div>
               </div>
               <div className="usercard d-flex">
-                <img height={"50px"} width={"50px"} src="client/src/assets/images/userimg.png" alt="" />
+                <img height={"50px"} width={"50px"} src="./src/assets/images/userimg.png" alt="" />
                 <div className="userDetails d-flex flex-column justify-content-center align-items-center">
                   <h4>Cillian Murphy</h4>
                   <p>J. Robert Oppenheimer</p>
                 </div>
               </div>
               <div className="usercard d-flex">
-                <img height={"50px"} width={"50px"} src="client/src/assets/images/userimg.png" alt="" />
+                <img height={"50px"} width={"50px"} src="./src/assets/images/userimg.png" alt="" />
                 <div className="userDetails d-flex flex-column justify-content-center align-items-center">
                   <h4>Cillian Murphy</h4>
                   <p>J. Robert Oppenheimer</p>
@@ -231,7 +231,7 @@ const SingleMoviePage = () => {
           </div>
           <div className="right d-flex flex-column justify-content-center align-items-center">
             <div className='d-flex align-items-center'>
-              <img src="client/src/assets/images/Ellipse 33.svg" alt="" />
+              <img src="./src/assets/images/Ellipse 33.svg" alt="" />
               <div className="rating-stars">
                 <input type="radio" name="rating" id="rs0" defaultChecked /><label htmlFor="rs0" />
                 <input type="radio" name="rating" id="rs1" /><label htmlFor="rs1" />

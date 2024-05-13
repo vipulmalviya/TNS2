@@ -1,6 +1,6 @@
-import Home from './pages/Home.jsx'
-import "./style.css"
-import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home.jsx';
+import "./style.css";
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './components/Footer/Footer.jsx';
 import Nav from './components/Nav/Nav.jsx';
 import Login from './pages/Login.jsx';
@@ -12,21 +12,26 @@ import CategoryPage from './pages/CategoryPage.jsx';
 
 
 function App() {
+  const location = useLocation();
+
+  const showMainNavBar = location.pathname !== '/login' && location.pathname !== '/';
+  const showFooter = location.pathname !== '/login' && location.pathname !== '/';
+
   return (
-    <Router>
-      <Nav />
-      <Routes>
+    <>
+      {showMainNavBar ? <Nav /> : null}
+      <Routes location={location}>
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Register />} />
+        <Route exact path="/Home" element={<Home />} />
         <Route exact path="/WatchlistPage" element={<WatchlistPage />} />
         <Route path="/SingleMoviePage" element={<SingleMoviePage />} />
         <Route path="/CuratedPage" element={<CuratedPage />} />
         <Route path="/CategoryPage" element={<CategoryPage />} />
       </Routes>
-      <Footer />
-    </Router>
-  )
+      {showFooter ? <Footer /> : null}
+    </>
+  );
 }
 
-export default App
+export default App;

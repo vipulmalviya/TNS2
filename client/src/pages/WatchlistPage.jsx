@@ -11,16 +11,16 @@ import { IoMdMore } from 'react-icons/io';
 import { IoAddCircleOutline } from 'react-icons/io5';
 const arr = [
   {
-    img: "client/src/assets/images/oppenheimer.png",
+    img: "./src/assets/images/oppenheimer.png",
   },
   {
-    img: "client/src/assets/images/sambhadur.png",
+    img: "./src/assets/images/sambhadur.png",
   },
   {
-    img: "client/src/assets/images/96ec47c5bba1a99388ccc5c88666398e.png",
+    img: "./src/assets/images/96ec47c5bba1a99388ccc5c88666398e.png",
   },
   {
-    img: "client/src/assets/images/da92a39b19b38d7c9b6e839bfff30d13.png",
+    img: "./src/assets/images/da92a39b19b38d7c9b6e839bfff30d13.png",
   }
 
 ]
@@ -28,37 +28,37 @@ const arr = [
 
 const data = [
   {
-    Poster: 'client/src/assets/images/dune.png',
+    Poster: './src/assets/images/dune.png',
     Title: 'Dune Part Two',
     watch: "94.5",
     catagory: "Sci-Fi, Adventure",
   },
   {
-    Poster: 'client/src/assets/images/KillersOfTheFlowerMoon.png',
+    Poster: './src/assets/images/KillersOfTheFlowerMoon.png',
     Title: 'Killers of the Flower Moon',
     watch: "90.5",
     catagory: "Crime, Western",
   },
   {
-    Poster: 'client/src/assets/images/saltburn.png',
+    Poster: './src/assets/images/saltburn.png',
     Title: 'Saltburn',
     watch: "91.5",
     catagory: "Comedy, Drama",
   },
   {
-    Poster: 'client/src/assets/images/Barbie.png',
+    Poster: './src/assets/images/Barbie.png',
     Title: 'Barbie',
     watch: "87.5",
     catagory: "Comedy, Fantasy",
   },
   {
-    Poster: 'client/src/assets/images/ThreeOfUs.png',
+    Poster: './src/assets/images/ThreeOfUs.png',
     Title: 'Three of us',
     watch: "91.3",
     catagory: "Drama",
   },
   {
-    Poster: 'client/src/assets/images/Sambhadur.png',
+    Poster: './src/assets/images/Sambhadur.png',
     Title: 'Sam Bhadur',
     watch: "89.5",
     catagory: "Biography, Drama",

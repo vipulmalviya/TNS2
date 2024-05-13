@@ -191,6 +191,17 @@ nav .rightt {
         padding: 0rem 1rem;
     }
 
+    .navM input {
+        position: absolute;
+        color: var(--text-color);
+        font-size: var(--p1-Paragraph);
+        border: none;
+        outline: none;
+        padding: 1rem 0rem 1rem 0rem;
+        margin: 0rem 0rem 0rem -2rem;
+        background: transparent;
+    }
+
     .side-menu {
         width: 100%;
     }

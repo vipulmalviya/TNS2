@@ -11,21 +11,21 @@ const CuratedSlider = ({ title }) => {
     const Lcard = [
         {
             cardID: 1,
-            poster: "client/src/assets/images/openhaimer.jpg",
+            poster: "./src/assets/images/openhaimer.jpg",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 2,
-            poster: "client/src/assets/images/Sambhadur.png",
+            poster: "./src/assets/images/Sambhadur.png",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
         },
         {
             cardID: 3,
-            poster: "client/src/assets/images/dune.png",
+            poster: "./src/assets/images/dune.png",
             content: "Biographical Movies Like Oppenheimer That’ll Impact You Deeply",
             watch: "91.5",
             paragraph: "6 Movies Ranked According to TNS Score",
@@ -56,14 +56,14 @@ const CuratedSlider = ({ title }) => {
             <div className="container">
                 <div className='SectionLablediv d-flex justify-content-between align-items-center'>
                     <h3 className='SectionLable'>{title}<IoIosArrowForward /></h3>
-                    <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="client/src/assets/images/tir.svg" alt="" /></span></span>
+                    <span className="d-flex align-items-center justify-content-center gap-2" style={{ color: "white", cursor: "pointer" }}>See All <span><img height="100%" width="100%" src="./src/assets/images/tir.svg" alt="" /></span></span>
                 </div>
                 <Carousel className="CuratedCards d-flex"
                     responsive={responsive}
                     removeArrowOnDeviceType={["tablet", "mobile"]}
                 >
-                    {Lcard.map((elem, index) => <Link to="/curatedPage">
-                        <div className="card m-2 d-flex" key={index} style={{
+                    {Lcard.map((elem, index) => <Link to="/curatedPage" key={index}>
+                        <div className="card m-2 d-flex"  style={{
                             background: `linear-gradient(to bottom, transparent, black), url(${elem.poster}) no-repeat`,
                         }}>
                             <div className='CardContainer'>

@@ -10,69 +10,69 @@ const CategoryPage = () => {
         {
             category: "Top_Rated",
             value: "Top Rated",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
         },
         {
             category: "AcademyWinner",
             value: "Academy Winner",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Around_the_Globe",
             value: "Around the Globe",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "User’s_Choice",
             value: "User’s Choice",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Handpicked",
             value: "Handpicked",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Classics",
             value: "Classics",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Classics",
             value: "Classics",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Classics",
             value: "Classics",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Family_Friendly",
             value: "Family Friendly",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         },
         {
             category: "Family_Friendly",
             value: "Family Friendly",
-            Poster: "client/src/assets/images/wonka.png",
+            Poster: "./src/assets/images/wonka.png",
             title: "Wonka",
 
         }

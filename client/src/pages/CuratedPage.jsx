@@ -12,7 +12,7 @@ export const CuratedPage = () => {
     const data = [
         {
             id: "01.",
-            title: "client/src/assets/images/oppenheimerlogo.svg",
+            title: "./src/assets/images/oppenheimerlogo.svg",
             type: "Biography, Thriller, War",
             pg: "CBFC: U/A",
             time: "1h 54m",
@@ -22,11 +22,11 @@ export const CuratedPage = () => {
             plot: "Alan Turing, a British mathematician, joins the cryptography team to decipher the German enigma code. With the help of his fellow mathematicians, he builds a machine to crack the codes.",
             tnsScore: "92.6",
             userReviews: "9.6",
-            link: "client/src/assets/images/oppenheimer.png"
+            link: "./src/assets/images/oppenheimer.png"
         },
         {
             id: "02.",
-            title: "client/src/assets/images/thebatman.png",
+            title: "./src/assets/images/thebatman.png",
             type: "Biography, Thriller, War",
             pg: "CBFC: U/A",
             time: "1h 54m",
@@ -36,11 +36,11 @@ export const CuratedPage = () => {
             plot: "Alan Turing, a British mathematician, joins the cryptography team to decipher the German enigma code. With the help of his fellow mathematicians, he builds a machine to crack the codes.",
             tnsScore: "92.6",
             userReviews: "9.6",
-            link: "client/src/assets/images/thebatmanposter.jpg"
+            link: "./src/assets/images/thebatmanposter.jpg"
         },
         {
             id: "03.",
-            title: "client/src/assets/images/theGreenKnightlogo.svg",
+            title: "./src/assets/images/theGreenKnightlogo.svg",
             type: "Biography, Thriller, War",
             pg: "CBFC: U/A",
             time: "1h 54m",
@@ -50,11 +50,11 @@ export const CuratedPage = () => {
             plot: "Alan Turing, a British mathematician, joins the cryptography team to decipher the German enigma code. With the help of his fellow mathematicians, he builds a machine to crack the codes.",
             tnsScore: "92.6",
             userReviews: "9.6",
-            link: "client/src/assets/images/MartinKaspar_GreenKnight.jpg"
+            link: "./src/assets/images/MartinKaspar_GreenKnight.jpg"
         },
         {
             id: "04.",
-            title: "client/src/assets/images/saltburnlogo.svg",
+            title: "./src/assets/images/saltburnlogo.svg",
             type: "Biography, Thriller, War",
             pg: "CBFC: U/A",
             time: "1h 54m",
@@ -64,13 +64,13 @@ export const CuratedPage = () => {
             plot: "Alan Turing, a British mathematician, joins the cryptography team to decipher the German enigma code. With the help of his fellow mathematicians, he builds a machine to crack the codes.",
             tnsScore: "92.6",
             userReviews: "9.6",
-            link: "client/src/assets/images/slatburnposter.jpg"
+            link: "./src/assets/images/slatburnposter.jpg"
         },
     ]
 
     return (
         <Fragment>
-            <div className='Curated_banner' style={{ background: ` url(${"client/src/assets/images/openhaimer.jpg"})` }}
+            <div className='Curated_banner' style={{ background: ` url(${"./src/assets/images/openhaimer.jpg"})` }}
             >
                 <div className='Curated_movie_details d-flex flex-column'>
                     <span className='tag'>Curated List</span>

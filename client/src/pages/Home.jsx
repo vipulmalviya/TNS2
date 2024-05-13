@@ -25,7 +25,7 @@ const Home = () => {
   const Lcard = [
     {
       id: 1,
-      Titlelogo: "client/src/assets/images/oppenheimerlogo.svg",
+      Titlelogo: "./src/assets/images/oppenheimerlogo.svg",
       Genre: [
         "Biography, ",
         "Drama"
@@ -33,12 +33,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2023",
       Accolades: "During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...",
-      poster_path: "client/src/assets/images/openhaimer.jpg",
+      poster_path: "./src/assets/images/openhaimer.jpg",
       popularity: "92.5",
     },
     {
       id: 2,
-      Titlelogo: "client/src/assets/images/thebatman.png",
+      Titlelogo: "./src/assets/images/thebatman.png",
       Genre: [
         "Action, ",
         "Crime"
@@ -46,12 +46,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2022",
       Accolades: "During World War II, Lt. Gen. Leslie Groves Jr. appoints Batman is called to intervene when the mayor of Gotham City is murdered. Soon...",
-      poster_path: "client/src/assets/images/batmanhome.png",
+      poster_path: "./src/assets/images/batmanhome.png",
       popularity: "92.5",
     },
     {
       id: 3,
-      Titlelogo: "client/src/assets/images/dunelogo.svg",
+      Titlelogo: "./src/assets/images/dunelogo.svg",
       Genre: [
         "Sci-fi, ",
         "Adventure"
@@ -59,12 +59,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2021",
       Accolades: "During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project...",
-      poster_path: "client/src/assets/images/dunehome.png",
+      poster_path: "./src/assets/images/dunehome.png",
       popularity: "92.5",
     },
     {
       id: 4,
-      Titlelogo: "client/src/assets/images/jokerlogo.svg",
+      Titlelogo: "./src/assets/images/jokerlogo.svg",
       Genre: [
         "Crime ",
         "Thriller"
@@ -72,12 +72,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "20219",
       Accolades: "Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak....",
-      poster_path: "client/public/images/jokerhome.png",
+      poster_path: "./public/images/jokerhome.png",
       popularity: "92.5",
     },
     {
       id: 5,
-      Titlelogo: "client/src/assets/images/avatarlogo.svg",
+      Titlelogo: "./src/assets/images/avatarlogo.svg",
       Genre: [
         "Action, ",
         "Sci-fi"
@@ -85,12 +85,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2022",
       Accolades: "Jake Sully and Ney'tiri have formed a family and are doing everything to stay together. However, they must leave their home and explore the regions of Pandora...",
-      poster_path: "client/src/assets/images/Avatarhome.png",
+      poster_path: "./src/assets/images/Avatarhome.png",
       popularity: "92.5",
     },
     {
       id: 6,
-      Titlelogo: "client/src/assets/images/theGreenKnightlogo.svg",
+      Titlelogo: "./src/assets/images/theGreenKnightlogo.svg",
       Genre: [
         "Advanture, ",
         "Horror"
@@ -98,12 +98,12 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2021",
       Accolades: "Sir Gawain, King Arthur's young nephew, embarks on an adventurous journey and deals with ghosts, thieves and giants as he sets out to defeat Green Knight, a giant...",
-      poster_path: "client/src/assets/images/theGreenKnighthome.png",
+      poster_path: "./src/assets/images/theGreenKnighthome.png",
       popularity: "92.5",
     },
     {
       id: 7,
-      Titlelogo: "client/src/assets/images/saltburnlogo.svg",
+      Titlelogo: "./src/assets/images/saltburnlogo.svg",
       Genre: [
         "Comedy, ",
         "Thriller"
@@ -111,7 +111,7 @@ const Home = () => {
       Runtime: "2h 55m",
       Release_Date: "2023",
       Accolades: "Distraught by his classmate Oliver's unfortunate living situation, Felix, a rich student, invites him over to his estate. Soon, a series of horrifying events engulf...",
-      poster_path: "client/src/assets/images/saltburnhome.png",
+      poster_path: "./src/assets/images/saltburnhome.png",
       popularity: "92.5",
     }
 
@@ -197,7 +197,7 @@ const Home = () => {
                   <p className='mb-0'>{elem.Genre}</p>
                   <p className='mb-0'>{elem.Release_Date}</p>
                   <span className='h-100 w-100 d-flex align-items-center justify-content-start gap-2 position-relative'>
-                    <img height={"100%"} width={"100%"} src="client/src/assets/images/Logo.svg" alt="" />
+                    <img height={"100%"} width={"100%"} src="./src/assets/images/Logo.svg" alt="" />
                     <p className='d-flex align-items-start justify-content-center m-0'>{elem.popularity}</p>
                   </span>
                 </div>

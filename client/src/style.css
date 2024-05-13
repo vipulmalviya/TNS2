@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'HalyardBold';
-  src: url('client/src/assets/fonts/Halyard Display.ttf');
+  src: url('./src/assets/fonts/Halyard Display.ttf');
 }
 
 * {
@@ -169,14 +169,12 @@ section {
 }
 
 .movieposter {
-  background-repeat: no-repeat;
-  background-position: center;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
   background-size: cover !important;
   height: 100%;
   width: 100vw;
 }
-
-.aboutMovie {}
 
 .aboutMovie p {
   font-size: var(--p2-Paragraph);
@@ -224,8 +222,9 @@ section {
 .movieBtns {
   max-width: 100%;
 }
-
-
+.movieBtns .mainbtn , .movieBtns .mainbtnSec{
+  width: 100% !important;
+}
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   width: 4rem;
@@ -252,11 +251,11 @@ section {
 }
 
 .carousel-control-prev-icon {
-  background-image: url("client/src/assets/images/leftarrow.svg");
+  background-image: url("./src/assets/images/leftarrow.svg");
 }
 
 .carousel-control-next-icon {
-  background-image: url("client/src/assets/images/rightarrow 15.svg");
+  background-image: url("./src/assets/images/rightarrow 15.svg");
 }
 
 .Caption>img {
@@ -319,7 +318,6 @@ section {
   width: 100%;
 }
 
-/* form css */
 .Rform {
   flex-direction: column;
   align-items: flex-start !important;
@@ -333,6 +331,7 @@ section {
 .Rleft .hinglight {
   font-size: var(--h1-Heading);
   margin-bottom: 1rem;
+  letter-spacing: .1rem;
   font-family: "HalyardBold", sans-serif;
   font-weight: 800;
 }
@@ -343,14 +342,20 @@ section {
 
 .Rleft p {
   margin-bottom: 2rem;
-  /* font-size: 1rem; */
+  font-size: var(--p2-Paragraph);
 }
 
 .Rleft li {
   display: flex;
   list-style: none;
-  align-items: center !important;
+  align-items: center;
   justify-content: center;
+}
+
+.Rleft li span {
+  font-size: var(--p2-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
 }
 
 .Rleft img {
@@ -361,28 +366,33 @@ section {
   cursor: pointer;
 }
 
+.passwordinput svg{
+  font-size: 1.2rem;
+cursor: pointer;
+position: absolute;
+right: 0;
+top: 50%;
+transform: translate(-50% , -50%);
+}
+
 
 /* ragister page css  */
 /* left css */
 
 
 .ragisterdiv {
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   width: 100vw;
 
 }
 
 .ragisterdiv .Rleft {
   color: var(--text-color);
-  /* position: absolute; */
-  /* top: 50%; */
   width: 60%;
-  /* min-height: 100vh; */
   align-items: flex-start !important;
   flex-direction: column;
   gap: 1rem;
   background-color: #282829;
-  /* background-color: red; */
   padding: 0 5rem;
   z-index: 1;
 }
@@ -394,28 +404,15 @@ section {
 /* right css */
 .ragisterdiv .Rright {
   color: var(--text-color);
-  /* position: absolute; */
-  /* top: 0; */
-  /* right: -50%; */
-  background-color: #1e1e1e40;
+  background-color: #1e1e1e49;
   z-index: 9 !important;
   backdrop-filter: blur(20px);
   padding: 4rem 10rem;
   width: 40%;
-  /* min-height: 100vh; */
   align-items: flex-start !important;
   flex-direction: column;
   border-left: .2px solid rgba(255, 255, 255, 0.454);
-}
-
-.open {
-  right: 0%;
-  transition: all .5s ease;
-}
-
-.open2 {
-  left: 0%;
-  transition: all .5s ease;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
 }
 
 /* form css */
@@ -462,6 +459,7 @@ section {
 .subhadding {
   font-size: var(--h3-Heading);
   font-family: "HalyardBold";
+  letter-spacing: .1rem;
   font-weight: 800;
   margin-bottom: 0;
 }
@@ -520,7 +518,7 @@ section {
 }
 
 .switch label::after {
-  content: url("client/src/assets/images/Frame 556.svg");
+  content: url("./src/assets/images/Frame 556.svg");
   position: absolute;
   left: 5%;
   top: 55%;
@@ -569,14 +567,92 @@ section {
 }
 
 .Rright .mainbtn,
-.mainbtnSec {
-  width: 100%;
-  justify-content: center;
+.Rright .mainbtnSec {
+  width: 100% !important;
+}
+
+.Rright .mainbtnSec {
+  border: 1px solid var(--text-color);
 }
 
 .Rright .mainbtnSec span {
   color: var(--text-color);
 }
+
+
+/* login page css */
+
+.logindiv {
+  min-height: 100vh;
+  width: 100vw;
+  border: none;
+}
+
+.loginmaindiv {
+  position: relative;
+  width: 100%;
+}
+
+.loginmaindiv section {
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  border: none;
+}
+
+.loginmaindiv .CuratedCards {
+  width: 100%;
+}
+
+.loginformdiv {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-color: #1e1e1e40;
+  z-index: 9 !important;
+  backdrop-filter: blur(20px);
+  padding: 4rem 10rem;
+  border-left: .2px solid rgba(255, 255, 255, 0.454);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) .3s;
+
+}
+
+.open2 {
+  position: absolute;
+  right: -100% !important;
+  top: 0%;
+}
+
+.loginformdiv p {
+  font-size: var(--p2-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
+}
+
+.loginformdiv form label {
+  font-size: var(--p2-Paragraph);
+  font-family: "Inter" sans-serif;
+  font-weight: 500;
+}
+
+.loginformdiv .mainbtn {
+  width: 100% !important;
+  margin-top: 1rem;
+}
+
+.loginformdiv .mainbtnSec {
+  border: 1px solid var(--text-color);
+  margin-bottom: 1rem;
+  width: 100% !important;
+}
+
+.loginformdiv .mainbtnSec a p {
+  color: var(--text-color);
+}
+
+
 
 /* watchlist page */
 .headersection {
@@ -773,7 +849,7 @@ section {
   margin-bottom: 1rem;
   font-family: "HalyardBold", sans-serif;
   font-weight: 800;
-    color: var(--decorate-color);
+  color: var(--decorate-color);
 }
 
 .Details {
@@ -1478,13 +1554,19 @@ input:checked:hover~.rating-counter:before {
 
 /* tablets screen  */
 @media screen and (max-width:1024px) and (min-width:768px) {
-  .Rright {
+  .ragisterdiv .Rright {
+    padding: 2rem;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+  }
+
+ .ragisterdiv .Rleft {
     padding: 2rem;
     width: 100vw;
   }
-
-  .Rleft {
-    padding: 2rem;
+  .loginformdiv {
+    padding:2rem;
     width: 100vw;
   }
 
@@ -1571,6 +1653,8 @@ input:checked:hover~.rating-counter:before {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+
+
 }
 
 /* tablets screen  */
@@ -1580,6 +1664,20 @@ input:checked:hover~.rating-counter:before {
 
 @media screen and (max-width:428px) {
 
+  .ragisterdiv .Rleft {
+    padding:1rem;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+  }
+  .ragisterdiv .Rright {
+    padding:1rem;
+    width: 100vw;
+  }
+  .loginformdiv {
+    padding:1rem;
+    width: 100vw;
+  }
   .SectionLable svg {
     display: none;
   }

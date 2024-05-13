@@ -126,7 +126,7 @@
 }
 
 .input-with-icon {
-    background: url('client/src/assets/images/arrow.svg') !important;
+    background: url('./src/assets/images/arrow.svg') !important;
     background-repeat: no-repeat !important;
     background-position: 95% center !important;
     background-size: 20px 20px;

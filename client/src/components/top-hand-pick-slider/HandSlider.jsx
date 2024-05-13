@@ -35,43 +35,43 @@ const HandSlider = ({ title, type }) => {
     const Lcard = [
         {
             id: 1,
-            poster_path: "client/src/assets/images/saltburn.png",
+            poster_path: "./src/assets/images/saltburn.png",
         },
         {
             id: 2,
-            poster_path: "client/src/assets/images/KillersOfTheFlowerMoon.png",
+            poster_path: "./src/assets/images/KillersOfTheFlowerMoon.png",
         },
         {
             id: 3,
-            poster_path: "client/src/assets/images/12fail.png",
+            poster_path: "./src/assets/images/12fail.png",
         },
         {
             id: 4,
-            poster_path: "client/src/assets/images/Barbie.png",
+            poster_path: "./src/assets/images/Barbie.png",
         },
         {
             id: 5,
-            poster_path: "client/src/assets/images/ThreeOfUs.png",
+            poster_path: "./src/assets/images/ThreeOfUs.png",
         },
         {
             id: 6,
-            poster_path: "client/src/assets/images/Sambhadur.png",
+            poster_path: "./src/assets/images/Sambhadur.png",
         },
         {
             id: 7,
-            poster_path: "client/src/assets/images/wonka.png",
+            poster_path: "./src/assets/images/wonka.png",
         },
         {
             id: 8,
-            poster_path: "client/src/assets/images/salaar.png",
+            poster_path: "./src/assets/images/salaar.png",
         },
         {
             id: 9,
-            poster_path: "client/src/assets/images/killerSoup.png",
+            poster_path: "./src/assets/images/killerSoup.png",
         },
         {
             id: 10,
-            poster_path: "client/src/assets/images/napoleo.png",
+            poster_path: "./src/assets/images/napoleo.png",
         },
     ];
 

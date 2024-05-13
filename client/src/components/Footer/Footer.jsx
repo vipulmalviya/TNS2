@@ -14,7 +14,7 @@ const Footer = () => {
         <footer className='footer'>
             <div className="footerT d-flex align-items-center">
                 <Link to="/" className='Flogo'>
-                    <img src="client/src/assets/images/originallogo.svg" alt="" />
+                    <img src="./src/assets/images/originallogo.svg" alt="" />
                 </Link>
                 <div className='social d-flex'>
                     <a href="https://www.instagram.com/thenextstream/">
@@ -36,8 +36,8 @@ const Footer = () => {
                     </h2>
                     <p>It’s free to join and helps finding underrated titles, around like minded there is a sense of cinema.</p>
                     <div className='footerbtns d-flex'>
-                        <a href="https://www.instagram.com/thenextstream/"><img src="client/src/assets/images/in.svg" alt="" /></a>
-                        <a href=""><img src="client/src/assets/images/Frame 50.svg" alt="" /></a>
+                        <a href="https://www.instagram.com/thenextstream/"><img src="./src/assets/images/in.svg" alt="" /></a>
+                        <a href=""><img src="./src/assets/images/Frame 50.svg" alt="" /></a>
                     </div>
                 </div>
                 <div className='footerM-r d-flex' >

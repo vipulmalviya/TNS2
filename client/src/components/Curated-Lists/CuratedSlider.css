@@ -31,6 +31,8 @@
     background-color: var(--decorate-color);
     color: black;
     margin-bottom: 1rem;
+    font-family: "Inter" sans-serif;
+    font-weight: 500;
 }
 
 .CuratedCards .card h3 {

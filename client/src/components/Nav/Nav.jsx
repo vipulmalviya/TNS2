@@ -17,7 +17,7 @@ const Nav = () => {
         <header >
             <nav className='d-flex align-items-center'>
                 <div className="left d-flex">
-                    <Link to="/" className="logo"><img height={"100%"} weight={"100%"} src="client/src/assets/images/originallogo.svg" alt="" /></Link>
+                    <Link to="/Home" className="logo"><img height={"100%"} weight={"100%"} src="./src/assets/images/originallogo.svg" alt="" /></Link>
                 </div>
                 <div className="navM align-items-center justify-content-end">
                     <form action="" className='d-flex align-items-center justify-content-center'>
@@ -29,10 +29,10 @@ const Nav = () => {
                 <div className="rightt d-flex gap-3">
                     <span className='Watchlist d-flex align-items-center'>
                         <p>My Watchlist</p>
-                        <img data-toggle="tooltip" title="My Profile"  height={"20%"} width={"20%"} src="client/src/assets/images/Ellipse 33.svg" alt="" />
+                        <img data-toggle="tooltip" title="My Profile"  height={"20%"} width={"20%"} src="./src/assets/images/Ellipse 33.svg" alt="" />
                     </span>
                     <div className="hamburgur" onClick={NavFunc} >
-                        <img height={"30px"} width={"30px"} src="client/src/assets/images/menu-alt-1.svg" alt="" />
+                        <img height={"30px"} width={"30px"} src="./src/assets/images/menu-alt-1.svg" alt="" />
                     </div>
                 </div>
                 <div className={`p-2 side-menu d-flex align-items-center justify-content-start flex-column ${Nav ? "open" : ""}`}>
